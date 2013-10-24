@@ -1,0 +1,2164 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/" xmlns:as="http://atomserver.org/namespaces/1.0/" xmlns:georss="http://www.georss.org/georss" xmlns:gml="http://www.opengis.net/gml" xml:base="http://dev.geogratis.gc.ca/api/en/nrcan-rncan/ess-sst/" xml:lang="en">
+    <as:endIndex>1539402</as:endIndex>
+    <os:totalResults estimated="true">181132</os:totalResults>
+    <os:startIndex>0</os:startIndex>
+    <os:itemsPerPage>25</os:itemsPerPage>
+    <link href="./?start-index=1539402" rel="next"/>
+    <link href="./?alt=osdx" rel="search" type="application/opensearchdescription+xml" hreflang="en" title="GeoGratis Product Search"/>
+    <link href="./" rel="self"/>
+    <link href="http://geogratis.gc.ca/api/" rel="profile"/>
+    <link href="./?edited-min=2013-09-12T19:02:39.673Z" rel="monitor"/>
+    <link href="./?alt=html" rel="alternate" type="text/html"/>
+    <link href="./?alt=nrcan" rel="alternate" type="application/vnd.nrcan.atom+xml"/>
+    <link href="./?alt=phtml" rel="alternate" type="text/phtml"/>
+    <link href="./?alt=csv" rel="alternate" type="text/csv"/>
+    <link href="./?alt=xml" rel="alternate" type="application/xml"/>
+    <link href="./?alt=rss" rel="alternate" type="application/rss+xml"/>
+    <link href="./?alt=json" rel="alternate" type="application/json"/>
+    <link href="./?alt=kml" rel="alternate" type="application/vnd.google-earth.kml+xml"/>
+    <link href="./?alt=map" rel="alternate" type="application/sitemap+xml"/>
+    <link href="http://geogratis.gc.ca/api/beta/fr/nrcan-rncan/ess-sst/" rel="alternate" hreflang="fr" title="Français"/>
+    <author>
+        <name>Natural Resources Canada</name>
+        <uri>http://nrcan.gc.ca</uri>
+    </author>
+    <title type="text">GeoGratis Product Selection</title>
+    <logo>http://geogratis.gc.ca/dist-3.1.1/theme-gcwu-fegc/images/wmms.png</logo>
+    <rights type="text">GEOGRATIS LICENCE AGREEMENT FOR UNRESTRICTED USE OF DIGITAL DATA (http://geogratis.cgdi.gc.ca/geogratis/en/licence.jsp)</rights>
+    <updated>2013-09-03T13:11:53.000Z</updated>
+    <id>tag:geogratis.gc.ca,2013:v1:ess-sst</id>
+    <collection xmlns="http://www.w3.org/2007/app" href="./">
+        <atom:title xmlns:atom="http://www.w3.org/2005/Atom" type="text">ess-sst</atom:title>
+        <accept/>
+        <categories xmlns:atom="http://www.w3.org/2005/Atom" href="$categories"/>
+        <link xmlns="http://www.w3.org/2005/Atom" rel="api" ttype="{+mediaType}" href="." tref="{+categoryQuery}?{+uriQuery}">
+            <mediaType>
+                <value>application/xml</value>
+                <value>text/csv</value>
+                <value>text/plain</value>
+                <value>text/html;profile="http://nap.geogratis.gc.ca/"</value>
+                <value>application/atom+xml;type=feed;profile="http://geogratis.gc.ca/api/"</value>
+                <value>application/json</value>
+                <value>application/vnd.nrcan.atom+xml</value>
+                <value>text/xml</value>
+                <value default="true">text/html</value>
+            </mediaType>
+            <categoryQuery tref="{+catPathSep}/{+categories}">
+                <catPathSep>
+                    <value>-</value>
+                </catPathSep>
+                <categories tref="{expression}">
+                    <expression tref="{op}{/expr*}">
+                        <op>
+                            <value>
+                                <pattern>[aA][nN][dD]</pattern>
+                            </value>
+                            <value>
+                                <pattern>[oO][rR]</pattern>
+                            </value>
+                        </op>
+                        <expr>
+                            <value tref="{expression}"/>
+                            <value tref="{predicate}">
+                                <predicate tref="({+scheme}){term}">
+                                    <scheme>
+                                        <value>
+                                            <scheme scheme="urn:atom:author" label="Author"/>
+                                        </value>
+                                        <value>
+                                            <scheme scheme="urn:gc:subject" label="Government of Canada Core Subject Thesaurus"/>
+                                        </value>
+                                        <value>
+                                            <scheme scheme="urn:iso:format" label="Digital media format"/>
+                                        </value>
+                                        <value>
+                                            <scheme scheme="urn:iso:place" label="Place or Location"/>
+                                        </value>
+                                        <value>
+                                            <scheme scheme="urn:iso:series" label="Publication Series"/>
+                                        </value>
+                                        <value>
+                                            <scheme scheme="urn:iso:type" label="Product Type"/>
+                                        </value>
+                                    </scheme>
+                                    <term>
+                                        <link rel="suggestions" ttype="{+mediaType}" src="." tref="{?q}{+scheme}" xml:base="./$categories/">
+                                            <mediaType>
+                                                <value>application/vnd.nrcan.atomcat+json</value>
+                                                <value default="true">application/atomcat+xml</value>
+                                            </mediaType>
+                                            <q>
+                                                <pattern>[ \+.:\-a-zA-Z0-9]*</pattern>
+                                            </q>
+                                        </link>
+                                    </term>
+                                </predicate>
+                            </value>
+                        </expr>
+                    </expression>
+                </categories>
+            </categoryQuery>
+            <uriQuery tref="q={q}&amp;bbox={+bbox}&amp;updated-min={updatedMin}&amp;updated-max={updatedMax}&amp;published-min={publishedMin}&amp;published-max={publishedMax}&amp;edited-min={editedMin}&amp;max-results={maxResults}&amp;entry-type={entryType}{&amp;callback}&amp;sort-field={sortField}{&amp;alt}">
+                <q>
+                    <pattern>[ \+.:\-a-zA-Z0-9]*</pattern>
+                </q>
+                <bbox tref="{cardinalDirections*}">
+                    <cardinalDirections format="west,south,east,north" units="decimal degrees">
+                        <values>
+                            <pattern>-[\d]{1,3}[\.][\d]{1,}</pattern> 
+                            <link rel="suggestions" type="application/vnd.nrcan.suggestions+json" src="." tref="?match=leading&amp;{q}" xml:base="http://geogratis.gc.ca/loc/en/loc/">
+                                <q>
+                                    <pattern>[ \+.:\-a-zA-Z0-9]*</pattern>
+                                </q>
+                            </link>
+                        </values>
+                    </cardinalDirections>
+                </bbox>
+                <updatedMin>
+                    <pattern>[0-9]{4}-(((0[13578]|(10|12))-(0[1-9]|[1-2][0-9]|3[0-1]))|(02-(0[1-9]|[1-2][0-9]))|((0[469]|11)-(0[1-9]|[1-2][0-9]|30)))(T{0,1}(([0-1][0-9])|([2][0-3])):[0-5][0-9]:([0-5][0-9])(\.[\d]{0,2}){0,1})(Z|([\-+]([0-1][0-9]|2[0-3]))(:[0-5][0-9])?)</pattern>
+                </updatedMin>
+                <updatedMax>
+                    <pattern>[0-9]{4}-(((0[13578]|(10|12))-(0[1-9]|[1-2][0-9]|3[0-1]))|(02-(0[1-9]|[1-2][0-9]))|((0[469]|11)-(0[1-9]|[1-2][0-9]|30)))(T{0,1}(([0-1][0-9])|([2][0-3])):[0-5][0-9]:([0-5][0-9])(\.[\d]{0,2}){0,1})(Z|([\-+]([0-1][0-9]|2[0-3]))(:[0-5][0-9])?)</pattern>
+                </updatedMax>
+                <publishedMin>
+                    <pattern>[0-9]{4}-(((0[13578]|(10|12))-(0[1-9]|[1-2][0-9]|3[0-1]))|(02-(0[1-9]|[1-2][0-9]))|((0[469]|11)-(0[1-9]|[1-2][0-9]|30)))(T{0,1}(([0-1][0-9])|([2][0-3])):[0-5][0-9]:([0-5][0-9])(\.[\d]{0,2}){0,1})(Z|([\-+]([0-1][0-9]|2[0-3]))(:[0-5][0-9])?)</pattern>
+                </publishedMin>
+                <publishedMax>
+                    <pattern>[0-9]{4}-(((0[13578]|(10|12))-(0[1-9]|[1-2][0-9]|3[0-1]))|(02-(0[1-9]|[1-2][0-9]))|((0[469]|11)-(0[1-9]|[1-2][0-9]|30)))(T{0,1}(([0-1][0-9])|([2][0-3])):[0-5][0-9]:([0-5][0-9])(\.[\d]{0,2}){0,1})(Z|([\-+]([0-1][0-9]|2[0-3]))(:[0-5][0-9])?)</pattern>
+                </publishedMax>
+                <editedMin>
+                    <pattern>[0-9]{4}-(((0[13578]|(10|12))-(0[1-9]|[1-2][0-9]|3[0-1]))|(02-(0[1-9]|[1-2][0-9]))|((0[469]|11)-(0[1-9]|[1-2][0-9]|30)))(T{0,1}(([0-1][0-9])|([2][0-3])):[0-5][0-9]:([0-5][0-9])(\.[\d]{0,2}){0,1})(Z|([\-+]([0-1][0-9]|2[0-3]))(:[0-5][0-9])?)</pattern>
+                </editedMin>
+                <maxResults>
+                    <pattern>[0-9]|1(0(0))|[1-9][0-9]</pattern>
+                </maxResults>
+                <entryType>
+                    <value>full</value>
+                    <value default="true">link</value>
+                </entryType>
+                <callback>
+                    <pattern>[a-zA-Z0-9]{1,64}</pattern>
+                </callback>
+                <locale>
+                    <value default="true">en_CA</value>
+                    <value>fr_CA</value>
+                </locale>
+                <sortField>
+                    <value default="true">edited</value>
+                    <value>spatial</value>
+                </sortField>
+                <alt>
+                    <value>naphtml</value>
+                    <value>json</value>
+                    <value default="true">html</value>
+                    <value>feed</value>
+                    <value>xml</value>
+                    <value>csv</value>
+                    <value>nrcan</value>
+                    <value>txt</value>
+                </alt>
+            </uriQuery>
+        </link>
+    </collection>
+    <entry xmlns:app="http://www.w3.org/2007/app">
+        <id>urn:uuid:47497ae3-807d-4fdb-8af2-7f3346f26f13</id>
+        <link href="./47497ae3-807d-4fdb-8af2-7f3346f26f13.xml" rel="self"/>
+        <link href="http://geogratis.gc.ca/api/" rel="profile"/>
+        <link href="./47497ae3-807d-4fdb-8af2-7f3346f26f13.xml/1" rel="edit"/>
+        <as:entryId>47497ae3-807d-4fdb-8af2-7f3346f26f13</as:entryId>
+        <as:updateIndex>1539452</as:updateIndex>
+        <as:revision>0</as:revision>
+        <link href="./47497ae3-807d-4fdb-8af2-7f3346f26f13.html" rel="alternate" type="text/html"/>
+        <link href="./47497ae3-807d-4fdb-8af2-7f3346f26f13.nrcan" rel="alternate" type="application/vnd.nrcan.atom+xml"/>
+        <link href="./47497ae3-807d-4fdb-8af2-7f3346f26f13.naphtml" rel="alternate" type="text/html; profile=&quot;http://nap.geogratis.gc.ca/&quot;"/>
+        <link href="./47497ae3-807d-4fdb-8af2-7f3346f26f13.phtml" rel="alternate" type="text/phtml"/>
+        <link href="./47497ae3-807d-4fdb-8af2-7f3346f26f13.csv" rel="alternate" type="text/csv"/>
+        <link href="./47497ae3-807d-4fdb-8af2-7f3346f26f13.xml" rel="alternate" type="application/xml"/>
+        <link href="./47497ae3-807d-4fdb-8af2-7f3346f26f13.rss" rel="alternate" type="application/rss+xml"/>
+        <link href="./47497ae3-807d-4fdb-8af2-7f3346f26f13.json" rel="alternate" type="application/json"/>
+        <link href="./47497ae3-807d-4fdb-8af2-7f3346f26f13.kml" rel="alternate" type="application/vnd.google-earth.kml+xml"/>
+        <link href="./47497ae3-807d-4fdb-8af2-7f3346f26f13.nap" rel="alternate" type="application/vnd.nrcan.nap+xml"/>
+        <link href="../../../fr/nrcan-rncan/ess-sst/47497ae3-807d-4fdb-8af2-7f3346f26f13.xml" rel="alternate" hreflang="fr" title="Français"/>
+        <link href=".?alt=osdx" rel="search" type="application/opensearchdescription+xml" title="GeoGratis Product Search"/>
+        <updated>2013-09-03T13:11:25.000Z</updated>
+        <app:edited>2013-09-12T16:58:01.187Z</app:edited>
+        <published>2013-09-03T00:00:00.000Z</published>
+        <title type="text">Toporama - 012J06, Quebec</title>
+        <author>
+            <name>Government of Canada, Natural Resources Canada, Earth Sciences Sector, Mapping Information Branch, Centre for Topographic Information - Sherbrooke</name>
+        </author>
+        <summary type="text">Toporama is a digital topographic reference product developed by Natural Resources Canada (NRCan). It covers the entire area of Canada's landmass and provides topographic, geo-referenced, and symbolic information in a raster format. The delimitation, content and representation of this product are similar to those of 1:50,000 scale topographical maps. Toporama is published as an edition (or "release") approximately every six months. It is available free of charge through the GeoGratis portal (www.GeoGratis.gc.ca) in GeoTIFF format, which is a geo-referenced raster format. Toporama is available in the following spatial reference systems: Universal Transverse Mercator (UTM) and geographic (latitude and longitude). Toporama is a product aimed at the general public that can be used by GPS system users who need a geo-referenced raster map product.</summary>
+        <rights type="text">GEOGRATIS LICENCE AGREEMENT FOR UNRESTRICTED USE OF DIGITAL DATA (http://geogratis.cgdi.gc.ca/geogratis/en/licence.jsp)</rights>
+        <as:locale>en_CA</as:locale>
+        <category scheme="urn:gc:subject" term="earth-sciences" label="earth sciences" frequency="42760">
+            <link href="-/(urn:gc:subject)earth-sciences" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="geographic-data" label="Geographic data" frequency="38018">
+            <link href="-/(urn:gc:subject)geographic-data" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="geotiff" label="GeoTIFF" frequency="54452">
+            <link href="-/(urn:iso:format)geotiff" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="quebec" label="Quebec" frequency="12122">
+            <link href="-/(urn:iso:place)quebec" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="part-of-012j05" label="Part of 012j05" frequency="2">
+            <link href="-/(urn:iso:place)part-of-012j05" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="012j06" label="012J06" frequency="5">
+            <link href="-/(urn:iso:place)012j06" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="12j06" label="12J06" frequency="1">
+            <link href="-/(urn:iso:place)12j06" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="12j6" label="12J6" frequency="1">
+            <link href="-/(urn:iso:place)12j6" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="012j6" label="012J6" frequency="1">
+            <link href="-/(urn:iso:place)012j6" rel="related"/>
+        </category>
+        <category scheme="urn:iso:series" term="toporama" label="Toporama" frequency="14880">
+            <link href="-/(urn:iso:series)toporama" rel="related"/>
+        </category>
+        <category scheme="urn:iso:type" term="map" label="Map" frequency="72481">
+            <link href="-/(urn:iso:type)map" rel="related"/>
+        </category>
+        <georss:where>
+            <gml:Polygon srsName="EPSG:4326">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>50.25 -59.5 50.5 -59.5 50.5 -59 50.25 -59 50.25 -59.5</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </georss:where>
+        <link href="./47497ae3-807d-4fdb-8af2-7f3346f26f13.xml" rel="alternate"/>
+    </entry>
+    <entry xmlns:app="http://www.w3.org/2007/app">
+        <id>urn:uuid:3c370d6d-200f-55ab-ad79-1d136d0744ae</id>
+        <link href="./3c370d6d-200f-55ab-ad79-1d136d0744ae.xml" rel="self"/>
+        <link href="http://geogratis.gc.ca/api/" rel="profile"/>
+        <link href="./3c370d6d-200f-55ab-ad79-1d136d0744ae.xml/1" rel="edit"/>
+        <as:entryId>3c370d6d-200f-55ab-ad79-1d136d0744ae</as:entryId>
+        <as:updateIndex>1539451</as:updateIndex>
+        <as:revision>0</as:revision>
+        <link href="./3c370d6d-200f-55ab-ad79-1d136d0744ae.html" rel="alternate" type="text/html"/>
+        <link href="./3c370d6d-200f-55ab-ad79-1d136d0744ae.nrcan" rel="alternate" type="application/vnd.nrcan.atom+xml"/>
+        <link href="./3c370d6d-200f-55ab-ad79-1d136d0744ae.naphtml" rel="alternate" type="text/html; profile=&quot;http://nap.geogratis.gc.ca/&quot;"/>
+        <link href="./3c370d6d-200f-55ab-ad79-1d136d0744ae.phtml" rel="alternate" type="text/phtml"/>
+        <link href="./3c370d6d-200f-55ab-ad79-1d136d0744ae.csv" rel="alternate" type="text/csv"/>
+        <link href="./3c370d6d-200f-55ab-ad79-1d136d0744ae.xml" rel="alternate" type="application/xml"/>
+        <link href="./3c370d6d-200f-55ab-ad79-1d136d0744ae.rss" rel="alternate" type="application/rss+xml"/>
+        <link href="./3c370d6d-200f-55ab-ad79-1d136d0744ae.json" rel="alternate" type="application/json"/>
+        <link href="./3c370d6d-200f-55ab-ad79-1d136d0744ae.kml" rel="alternate" type="application/vnd.google-earth.kml+xml"/>
+        <link href="./3c370d6d-200f-55ab-ad79-1d136d0744ae.nap" rel="alternate" type="application/vnd.nrcan.nap+xml"/>
+        <link href="../../../fr/nrcan-rncan/ess-sst/3c370d6d-200f-55ab-ad79-1d136d0744ae.xml" rel="alternate" hreflang="fr" title="Français"/>
+        <link href=".?alt=osdx" rel="search" type="application/opensearchdescription+xml" title="GeoGratis Product Search"/>
+        <updated>2013-09-12T00:16:46.000Z</updated>
+        <app:edited>2013-09-12T16:58:00.863Z</app:edited>
+        <published>1988-01-01T00:00:00.000Z</published>
+        <title type="text">Contributions to canadian paleontology</title>
+        <author>
+            <name>Reynolds, L</name>
+        </author>
+        <summary type="text">Abstract not available. This series generally comprises final results from ESS science projects (outputs) or comprehensive final reports on subjects such as the geology of specific geographic areas or the study of climate change in an area of Canada. Bulletins deal with topics like the following and are of either broad regional or local interest: systematic bedrock or surficial mapping, geophysics, geochemistry, structural geology, economic geology, carbon sequestration, climate change, etc. Accompanying data are released in the Data or Open File series. A Bulletin is either a monograph (a report on a single subject or a group of related subjects, usually written by one author) or a compendium (a collection of articles on a subject or group of related subjects by different authors). They are all critically reviewed by two specialists. The series is geared towards specialists (mining industry, land-use planning, geoscience students) rather than the general public.</summary>
+        <rights type="text">GEOGRATIS LICENCE AGREEMENT FOR UNRESTRICTED USE OF DIGITAL DATA (http://geogratis.cgdi.gc.ca/geogratis/en/licence.jsp)</rights>
+        <as:locale>en_CA</as:locale>
+        <category scheme="urn:atom:author" term="reynolds-l" label="Reynolds, L">
+            <link href="-/(urn:atom:author)reynolds-l" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="earth-sciences" label="earth sciences" frequency="42760">
+            <link href="-/(urn:gc:subject)earth-sciences" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="fossils" label="fossils" frequency="270">
+            <link href="-/(urn:gc:subject)fossils" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="taxonomy" label="taxonomy" frequency="10">
+            <link href="-/(urn:gc:subject)taxonomy" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="pdf" label="PDF" frequency="38692">
+            <link href="-/(urn:iso:format)pdf" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="quebec" label="Quebec" frequency="12122">
+            <link href="-/(urn:iso:place)quebec" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="manitoba" label="Manitoba" frequency="8019">
+            <link href="-/(urn:iso:place)manitoba" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="ontario" label="Ontario" frequency="10480">
+            <link href="-/(urn:iso:place)ontario" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="northwest-territories" label="Northwest Territories" frequency="11435">
+            <link href="-/(urn:iso:place)northwest-territories" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="alberta" label="Alberta" frequency="7854">
+            <link href="-/(urn:iso:place)alberta" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="yukon" label="Yukon" frequency="7356">
+            <link href="-/(urn:iso:place)yukon" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="british-columbia" label="British Columbia" frequency="9750">
+            <link href="-/(urn:iso:place)british-columbia" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="saskatchewan" label="Saskatchewan" frequency="8043">
+            <link href="-/(urn:iso:place)saskatchewan" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="nunavut" label="Nunavut" frequency="17296">
+            <link href="-/(urn:iso:place)nunavut" rel="related"/>
+        </category>
+        <category scheme="urn:iso:series" term="geological-survey-of-canada-bulletin" label="Geological Survey of Canada, Bulletin" frequency="142">
+            <link href="-/(urn:iso:series)geological-survey-of-canada-bulletin" rel="related"/>
+        </category>
+        <category scheme="urn:iso:type" term="publication" label="Publication" frequency="6043">
+            <link href="-/(urn:iso:type)publication" rel="related"/>
+        </category>
+        <georss:where>
+            <gml:Polygon srsName="EPSG:4326">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>40 -141 70 -141 70 -60 40 -60 40 -141</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </georss:where>
+        <link href="./3c370d6d-200f-55ab-ad79-1d136d0744ae.xml" rel="alternate"/>
+    </entry>
+    <entry xmlns:app="http://www.w3.org/2007/app">
+        <id>urn:uuid:54eeef14-ddfa-4d7e-9615-675712dc88c8</id>
+        <link href="./54eeef14-ddfa-4d7e-9615-675712dc88c8.xml" rel="self"/>
+        <link href="http://geogratis.gc.ca/api/" rel="profile"/>
+        <link href="./54eeef14-ddfa-4d7e-9615-675712dc88c8.xml/1" rel="edit"/>
+        <as:entryId>54eeef14-ddfa-4d7e-9615-675712dc88c8</as:entryId>
+        <as:updateIndex>1539450</as:updateIndex>
+        <as:revision>0</as:revision>
+        <link href="./54eeef14-ddfa-4d7e-9615-675712dc88c8.html" rel="alternate" type="text/html"/>
+        <link href="./54eeef14-ddfa-4d7e-9615-675712dc88c8.nrcan" rel="alternate" type="application/vnd.nrcan.atom+xml"/>
+        <link href="./54eeef14-ddfa-4d7e-9615-675712dc88c8.naphtml" rel="alternate" type="text/html; profile=&quot;http://nap.geogratis.gc.ca/&quot;"/>
+        <link href="./54eeef14-ddfa-4d7e-9615-675712dc88c8.phtml" rel="alternate" type="text/phtml"/>
+        <link href="./54eeef14-ddfa-4d7e-9615-675712dc88c8.csv" rel="alternate" type="text/csv"/>
+        <link href="./54eeef14-ddfa-4d7e-9615-675712dc88c8.xml" rel="alternate" type="application/xml"/>
+        <link href="./54eeef14-ddfa-4d7e-9615-675712dc88c8.rss" rel="alternate" type="application/rss+xml"/>
+        <link href="./54eeef14-ddfa-4d7e-9615-675712dc88c8.json" rel="alternate" type="application/json"/>
+        <link href="./54eeef14-ddfa-4d7e-9615-675712dc88c8.kml" rel="alternate" type="application/vnd.google-earth.kml+xml"/>
+        <link href="./54eeef14-ddfa-4d7e-9615-675712dc88c8.nap" rel="alternate" type="application/vnd.nrcan.nap+xml"/>
+        <link href="../../../fr/nrcan-rncan/ess-sst/54eeef14-ddfa-4d7e-9615-675712dc88c8.xml" rel="alternate" hreflang="fr" title="Français"/>
+        <link href=".?alt=osdx" rel="search" type="application/opensearchdescription+xml" title="GeoGratis Product Search"/>
+        <updated>2013-09-03T13:09:34.000Z</updated>
+        <app:edited>2013-09-12T16:57:59.810Z</app:edited>
+        <published>2013-09-03T00:00:00.000Z</published>
+        <title type="text">Toporama - 036D15</title>
+        <author>
+            <name>Government of Canada, Natural Resources Canada, Earth Sciences Sector, Mapping Information Branch, Centre for Topographic Information - Sherbrooke</name>
+        </author>
+        <summary type="text">Toporama is a digital topographic reference product developed by Natural Resources Canada (NRCan). It covers the entire area of Canada's landmass and provides topographic, geo-referenced, and symbolic information in a raster format. The delimitation, content and representation of this product are similar to those of 1:50,000 scale topographical maps. Toporama is published as an edition (or "release") approximately every six months. It is available free of charge through the GeoGratis portal (www.GeoGratis.gc.ca) in GeoTIFF format, which is a geo-referenced raster format. Toporama is available in the following spatial reference systems: Universal Transverse Mercator (UTM) and geographic (latitude and longitude). Toporama is a product aimed at the general public that can be used by GPS system users who need a geo-referenced raster map product.</summary>
+        <rights type="text">GEOGRATIS LICENCE AGREEMENT FOR UNRESTRICTED USE OF DIGITAL DATA (http://geogratis.cgdi.gc.ca/geogratis/en/licence.jsp)</rights>
+        <as:locale>en_CA</as:locale>
+        <category scheme="urn:gc:subject" term="earth-sciences" label="earth sciences" frequency="42760">
+            <link href="-/(urn:gc:subject)earth-sciences" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="geographic-data" label="Geographic data" frequency="38018">
+            <link href="-/(urn:gc:subject)geographic-data" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="geotiff" label="GeoTIFF" frequency="54452">
+            <link href="-/(urn:iso:format)geotiff" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="canada" label="Canada" frequency="7345">
+            <link href="-/(urn:iso:place)canada" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="036d15" label="036D15" frequency="1">
+            <link href="-/(urn:iso:place)036d15" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="36d15" label="36D15" frequency="1">
+            <link href="-/(urn:iso:place)36d15" rel="related"/>
+        </category>
+        <category scheme="urn:iso:series" term="toporama" label="Toporama" frequency="14880">
+            <link href="-/(urn:iso:series)toporama" rel="related"/>
+        </category>
+        <category scheme="urn:iso:type" term="map" label="Map" frequency="72481">
+            <link href="-/(urn:iso:type)map" rel="related"/>
+        </category>
+        <georss:where>
+            <gml:Polygon srsName="EPSG:4326">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>64.75 -79 65 -79 65 -78.5 64.75 -78.5 64.75 -79</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </georss:where>
+        <link href="./54eeef14-ddfa-4d7e-9615-675712dc88c8.xml" rel="alternate"/>
+    </entry>
+    <entry xmlns:app="http://www.w3.org/2007/app">
+        <id>urn:uuid:89173043-0a1e-56fd-8d4b-8274b3329cae</id>
+        <link href="./89173043-0a1e-56fd-8d4b-8274b3329cae.xml" rel="self"/>
+        <link href="http://geogratis.gc.ca/api/" rel="profile"/>
+        <link href="./89173043-0a1e-56fd-8d4b-8274b3329cae.xml/1" rel="edit"/>
+        <as:entryId>89173043-0a1e-56fd-8d4b-8274b3329cae</as:entryId>
+        <as:updateIndex>1539448</as:updateIndex>
+        <as:revision>0</as:revision>
+        <link href="./89173043-0a1e-56fd-8d4b-8274b3329cae.html" rel="alternate" type="text/html"/>
+        <link href="./89173043-0a1e-56fd-8d4b-8274b3329cae.nrcan" rel="alternate" type="application/vnd.nrcan.atom+xml"/>
+        <link href="./89173043-0a1e-56fd-8d4b-8274b3329cae.naphtml" rel="alternate" type="text/html; profile=&quot;http://nap.geogratis.gc.ca/&quot;"/>
+        <link href="./89173043-0a1e-56fd-8d4b-8274b3329cae.phtml" rel="alternate" type="text/phtml"/>
+        <link href="./89173043-0a1e-56fd-8d4b-8274b3329cae.csv" rel="alternate" type="text/csv"/>
+        <link href="./89173043-0a1e-56fd-8d4b-8274b3329cae.xml" rel="alternate" type="application/xml"/>
+        <link href="./89173043-0a1e-56fd-8d4b-8274b3329cae.rss" rel="alternate" type="application/rss+xml"/>
+        <link href="./89173043-0a1e-56fd-8d4b-8274b3329cae.json" rel="alternate" type="application/json"/>
+        <link href="./89173043-0a1e-56fd-8d4b-8274b3329cae.kml" rel="alternate" type="application/vnd.google-earth.kml+xml"/>
+        <link href="./89173043-0a1e-56fd-8d4b-8274b3329cae.nap" rel="alternate" type="application/vnd.nrcan.nap+xml"/>
+        <link href="../../../fr/nrcan-rncan/ess-sst/89173043-0a1e-56fd-8d4b-8274b3329cae.xml" rel="alternate" hreflang="fr" title="Français"/>
+        <link href=".?alt=osdx" rel="search" type="application/opensearchdescription+xml" title="GeoGratis Product Search"/>
+        <updated>2013-09-11T00:15:03.000Z</updated>
+        <app:edited>2013-09-12T16:57:58.386Z</app:edited>
+        <published>1963-01-01T00:00:00.000Z</published>
+        <title type="text">Ammonite Faunas of the Upper Middle Jurassic Beds of the Fernie Group in western Canada</title>
+        <author>
+            <name>Frebold, H</name>
+        </author>
+        <summary type="text">Abstract not available. This series generally comprises final results from ESS science projects (outputs) or comprehensive final reports on subjects such as the geology of specific geographic areas or the study of climate change in an area of Canada. Bulletins deal with topics like the following and are of either broad regional or local interest: systematic bedrock or surficial mapping, geophysics, geochemistry, structural geology, economic geology, carbon sequestration, climate change, etc. Accompanying data are released in the Data or Open File series. A Bulletin is either a monograph (a report on a single subject or a group of related subjects, usually written by one author) or a compendium (a collection of articles on a subject or group of related subjects by different authors). They are all critically reviewed by two specialists. The series is geared towards specialists (mining industry, land-use planning, geoscience students) rather than the general public.</summary>
+        <rights type="text">GEOGRATIS LICENCE AGREEMENT FOR UNRESTRICTED USE OF DIGITAL DATA (http://geogratis.cgdi.gc.ca/geogratis/en/licence.jsp)</rights>
+        <as:locale>en_CA</as:locale>
+        <category scheme="urn:atom:author" term="frebold-h" label="Frebold, H">
+            <link href="-/(urn:atom:author)frebold-h" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="earth-sciences" label="earth sciences" frequency="42760">
+            <link href="-/(urn:gc:subject)earth-sciences" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="pdf" label="PDF" frequency="38692">
+            <link href="-/(urn:iso:format)pdf" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="saskatchewan" label="Saskatchewan" frequency="8043">
+            <link href="-/(urn:iso:place)saskatchewan" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="alberta" label="Alberta" frequency="7854">
+            <link href="-/(urn:iso:place)alberta" rel="related"/>
+        </category>
+        <category scheme="urn:iso:series" term="geological-survey-of-canada-bulletin" label="Geological Survey of Canada, Bulletin" frequency="142">
+            <link href="-/(urn:iso:series)geological-survey-of-canada-bulletin" rel="related"/>
+        </category>
+        <category scheme="urn:iso:type" term="publication" label="Publication" frequency="6043">
+            <link href="-/(urn:iso:type)publication" rel="related"/>
+        </category>
+        <georss:where>
+            <gml:Polygon srsName="EPSG:4326">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>49.5 -119 54 -119 54 -101 49.5 -101 49.5 -119</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </georss:where>
+        <link href="./89173043-0a1e-56fd-8d4b-8274b3329cae.xml" rel="alternate"/>
+    </entry>
+    <entry xmlns:app="http://www.w3.org/2007/app">
+        <id>urn:uuid:f6f12416-4545-51f7-b032-d0359b28acc4</id>
+        <link href="./f6f12416-4545-51f7-b032-d0359b28acc4.xml" rel="self"/>
+        <link href="http://geogratis.gc.ca/api/" rel="profile"/>
+        <link href="./f6f12416-4545-51f7-b032-d0359b28acc4.xml/1" rel="edit"/>
+        <as:entryId>f6f12416-4545-51f7-b032-d0359b28acc4</as:entryId>
+        <as:updateIndex>1539446</as:updateIndex>
+        <as:revision>0</as:revision>
+        <link href="./f6f12416-4545-51f7-b032-d0359b28acc4.html" rel="alternate" type="text/html"/>
+        <link href="./f6f12416-4545-51f7-b032-d0359b28acc4.nrcan" rel="alternate" type="application/vnd.nrcan.atom+xml"/>
+        <link href="./f6f12416-4545-51f7-b032-d0359b28acc4.naphtml" rel="alternate" type="text/html; profile=&quot;http://nap.geogratis.gc.ca/&quot;"/>
+        <link href="./f6f12416-4545-51f7-b032-d0359b28acc4.phtml" rel="alternate" type="text/phtml"/>
+        <link href="./f6f12416-4545-51f7-b032-d0359b28acc4.csv" rel="alternate" type="text/csv"/>
+        <link href="./f6f12416-4545-51f7-b032-d0359b28acc4.xml" rel="alternate" type="application/xml"/>
+        <link href="./f6f12416-4545-51f7-b032-d0359b28acc4.rss" rel="alternate" type="application/rss+xml"/>
+        <link href="./f6f12416-4545-51f7-b032-d0359b28acc4.json" rel="alternate" type="application/json"/>
+        <link href="./f6f12416-4545-51f7-b032-d0359b28acc4.kml" rel="alternate" type="application/vnd.google-earth.kml+xml"/>
+        <link href="./f6f12416-4545-51f7-b032-d0359b28acc4.nap" rel="alternate" type="application/vnd.nrcan.nap+xml"/>
+        <link href="../../../fr/nrcan-rncan/ess-sst/f6f12416-4545-51f7-b032-d0359b28acc4.xml" rel="alternate" hreflang="fr" title="Français"/>
+        <link href=".?alt=osdx" rel="search" type="application/opensearchdescription+xml" title="GeoGratis Product Search"/>
+        <updated>2013-09-06T12:09:41.000Z</updated>
+        <app:edited>2013-09-12T16:57:57.501Z</app:edited>
+        <published>1981-01-01T00:00:00.000Z</published>
+        <title type="text">Geology and petrology of the red wine alkaline complex, central Labrador</title>
+        <author>
+            <name>Curtis, L W; Currie, K L</name>
+        </author>
+        <summary type="text">Abstract not available. This series generally comprises final results from ESS science projects (outputs) or comprehensive final reports on subjects such as the geology of specific geographic areas or the study of climate change in an area of Canada. Bulletins deal with topics like the following and are of either broad regional or local interest: systematic bedrock or surficial mapping, geophysics, geochemistry, structural geology, economic geology, carbon sequestration, climate change, etc. Accompanying data are released in the Data or Open File series. A Bulletin is either a monograph (a report on a single subject or a group of related subjects, usually written by one author) or a compendium (a collection of articles on a subject or group of related subjects by different authors). They are all critically reviewed by two specialists. The series is geared towards specialists (mining industry, land-use planning, geoscience students) rather than the general public.</summary>
+        <rights type="text">GEOGRATIS LICENCE AGREEMENT FOR UNRESTRICTED USE OF DIGITAL DATA (http://geogratis.cgdi.gc.ca/geogratis/en/licence.jsp)</rights>
+        <as:locale>en_CA</as:locale>
+        <category scheme="urn:atom:author" term="curtis-l-w" label="Curtis, L W">
+            <link href="-/(urn:atom:author)curtis-l-w" rel="related"/>
+        </category>
+        <category scheme="urn:atom:author" term="currie-k-l" label="Currie, K L" frequency="27">
+            <link href="-/(urn:atom:author)currie-k-l" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="earth-sciences" label="earth sciences" frequency="42760">
+            <link href="-/(urn:gc:subject)earth-sciences" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="geochemistry" label="geochemistry" frequency="1026">
+            <link href="-/(urn:gc:subject)geochemistry" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="zip" label="ZIP" frequency="4273">
+            <link href="-/(urn:iso:format)zip" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="newfoundland-and-labrador" label="Newfoundland and Labrador" frequency="7092">
+            <link href="-/(urn:iso:place)newfoundland-and-labrador" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="labrador" label="Labrador" frequency="747">
+            <link href="-/(urn:iso:place)labrador" rel="related"/>
+        </category>
+        <category scheme="urn:iso:series" term="geological-survey-of-canada-bulletin" label="Geological Survey of Canada, Bulletin" frequency="142">
+            <link href="-/(urn:iso:series)geological-survey-of-canada-bulletin" rel="related"/>
+        </category>
+        <category scheme="urn:iso:type" term="publication" label="Publication" frequency="6043">
+            <link href="-/(urn:iso:type)publication" rel="related"/>
+        </category>
+        <georss:where>
+            <gml:Polygon srsName="EPSG:4326">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>53.916699999999999 -62.833300000000001 54.25 -62.833300000000001 54.25 -62.333300000000001 53.916699999999999 -62.333300000000001 53.916699999999999 -62.833300000000001</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </georss:where>
+        <link href="./f6f12416-4545-51f7-b032-d0359b28acc4.xml" rel="alternate"/>
+    </entry>
+    <entry xmlns:app="http://www.w3.org/2007/app">
+        <id>urn:uuid:69cb3aed-7dc2-55a4-b508-d1f674c0a6b8</id>
+        <link href="./69cb3aed-7dc2-55a4-b508-d1f674c0a6b8.xml" rel="self"/>
+        <link href="http://geogratis.gc.ca/api/" rel="profile"/>
+        <link href="./69cb3aed-7dc2-55a4-b508-d1f674c0a6b8.xml/1" rel="edit"/>
+        <as:entryId>69cb3aed-7dc2-55a4-b508-d1f674c0a6b8</as:entryId>
+        <as:updateIndex>1539445</as:updateIndex>
+        <as:revision>0</as:revision>
+        <link href="./69cb3aed-7dc2-55a4-b508-d1f674c0a6b8.html" rel="alternate" type="text/html"/>
+        <link href="./69cb3aed-7dc2-55a4-b508-d1f674c0a6b8.nrcan" rel="alternate" type="application/vnd.nrcan.atom+xml"/>
+        <link href="./69cb3aed-7dc2-55a4-b508-d1f674c0a6b8.naphtml" rel="alternate" type="text/html; profile=&quot;http://nap.geogratis.gc.ca/&quot;"/>
+        <link href="./69cb3aed-7dc2-55a4-b508-d1f674c0a6b8.phtml" rel="alternate" type="text/phtml"/>
+        <link href="./69cb3aed-7dc2-55a4-b508-d1f674c0a6b8.csv" rel="alternate" type="text/csv"/>
+        <link href="./69cb3aed-7dc2-55a4-b508-d1f674c0a6b8.xml" rel="alternate" type="application/xml"/>
+        <link href="./69cb3aed-7dc2-55a4-b508-d1f674c0a6b8.rss" rel="alternate" type="application/rss+xml"/>
+        <link href="./69cb3aed-7dc2-55a4-b508-d1f674c0a6b8.json" rel="alternate" type="application/json"/>
+        <link href="./69cb3aed-7dc2-55a4-b508-d1f674c0a6b8.kml" rel="alternate" type="application/vnd.google-earth.kml+xml"/>
+        <link href="./69cb3aed-7dc2-55a4-b508-d1f674c0a6b8.nap" rel="alternate" type="application/vnd.nrcan.nap+xml"/>
+        <link href="../../../fr/nrcan-rncan/ess-sst/69cb3aed-7dc2-55a4-b508-d1f674c0a6b8.xml" rel="alternate" hreflang="fr" title="Français"/>
+        <link href=".?alt=osdx" rel="search" type="application/opensearchdescription+xml" title="GeoGratis Product Search"/>
+        <updated>2013-09-11T00:16:20.000Z</updated>
+        <app:edited>2013-09-12T16:57:54.311Z</app:edited>
+        <published>1983-01-01T00:00:00.000Z</published>
+        <title type="text">Pre-Mesozoic geology in the subsurface of Peel River map area, Yukon Territory and district of Mackenzie</title>
+        <author>
+            <name>Pugh, D C</name>
+        </author>
+        <summary type="text">Abstract not available. These are comprehensive final reports on the geology of specific geographic areas.</summary>
+        <rights type="text">GEOGRATIS LICENCE AGREEMENT FOR UNRESTRICTED USE OF DIGITAL DATA (http://geogratis.cgdi.gc.ca/geogratis/en/licence.jsp)</rights>
+        <as:locale>en_CA</as:locale>
+        <category scheme="urn:atom:author" term="pugh-d-c" label="Pugh, D C" frequency="2">
+            <link href="-/(urn:atom:author)pugh-d-c" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="earth-sciences" label="earth sciences" frequency="42760">
+            <link href="-/(urn:gc:subject)earth-sciences" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="stratigraphy" label="stratigraphy" frequency="1708">
+            <link href="-/(urn:gc:subject)stratigraphy" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="zip" label="ZIP" frequency="4273">
+            <link href="-/(urn:iso:format)zip" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="yukon" label="Yukon" frequency="7356">
+            <link href="-/(urn:iso:place)yukon" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="northwest-territories" label="Northwest Territories" frequency="11435">
+            <link href="-/(urn:iso:place)northwest-territories" rel="related"/>
+        </category>
+        <category scheme="urn:iso:series" term="geological-survey-of-canada-memoir" label="Geological Survey of Canada, Memoir" frequency="13">
+            <link href="-/(urn:iso:series)geological-survey-of-canada-memoir" rel="related"/>
+        </category>
+        <category scheme="urn:iso:type" term="publication" label="Publication" frequency="6043">
+            <link href="-/(urn:iso:type)publication" rel="related"/>
+        </category>
+        <georss:where>
+            <gml:Polygon srsName="EPSG:4326">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>65 -141 69 -141 69 -127 65 -127 65 -141</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </georss:where>
+        <link href="./69cb3aed-7dc2-55a4-b508-d1f674c0a6b8.xml" rel="alternate"/>
+    </entry>
+    <entry xmlns:app="http://www.w3.org/2007/app">
+        <id>urn:uuid:6fc62fe2-fe56-589d-872b-60b92c986170</id>
+        <link href="./6fc62fe2-fe56-589d-872b-60b92c986170.xml" rel="self"/>
+        <link href="http://geogratis.gc.ca/api/" rel="profile"/>
+        <link href="./6fc62fe2-fe56-589d-872b-60b92c986170.xml/1" rel="edit"/>
+        <as:entryId>6fc62fe2-fe56-589d-872b-60b92c986170</as:entryId>
+        <as:updateIndex>1539439</as:updateIndex>
+        <as:revision>0</as:revision>
+        <link href="./6fc62fe2-fe56-589d-872b-60b92c986170.html" rel="alternate" type="text/html"/>
+        <link href="./6fc62fe2-fe56-589d-872b-60b92c986170.nrcan" rel="alternate" type="application/vnd.nrcan.atom+xml"/>
+        <link href="./6fc62fe2-fe56-589d-872b-60b92c986170.naphtml" rel="alternate" type="text/html; profile=&quot;http://nap.geogratis.gc.ca/&quot;"/>
+        <link href="./6fc62fe2-fe56-589d-872b-60b92c986170.phtml" rel="alternate" type="text/phtml"/>
+        <link href="./6fc62fe2-fe56-589d-872b-60b92c986170.csv" rel="alternate" type="text/csv"/>
+        <link href="./6fc62fe2-fe56-589d-872b-60b92c986170.xml" rel="alternate" type="application/xml"/>
+        <link href="./6fc62fe2-fe56-589d-872b-60b92c986170.rss" rel="alternate" type="application/rss+xml"/>
+        <link href="./6fc62fe2-fe56-589d-872b-60b92c986170.json" rel="alternate" type="application/json"/>
+        <link href="./6fc62fe2-fe56-589d-872b-60b92c986170.kml" rel="alternate" type="application/vnd.google-earth.kml+xml"/>
+        <link href="./6fc62fe2-fe56-589d-872b-60b92c986170.nap" rel="alternate" type="application/vnd.nrcan.nap+xml"/>
+        <link href="../../../fr/nrcan-rncan/ess-sst/6fc62fe2-fe56-589d-872b-60b92c986170.xml" rel="alternate" hreflang="fr" title="Français"/>
+        <link href=".?alt=osdx" rel="search" type="application/opensearchdescription+xml" title="GeoGratis Product Search"/>
+        <updated>2013-09-12T00:16:20.000Z</updated>
+        <app:edited>2013-09-12T16:57:50.647Z</app:edited>
+        <published>1971-01-01T00:00:00.000Z</published>
+        <title type="text">Geology and mineral deposits of Tulsequah map area, British Columbia</title>
+        <author>
+            <name>Souther, J G</name>
+        </author>
+        <summary type="text">Abstract not available. These are comprehensive final reports on the geology of specific geographic areas.</summary>
+        <rights type="text">GEOGRATIS LICENCE AGREEMENT FOR UNRESTRICTED USE OF DIGITAL DATA (http://geogratis.cgdi.gc.ca/geogratis/en/licence.jsp)</rights>
+        <as:locale>en_CA</as:locale>
+        <category scheme="urn:atom:author" term="souther-j-g" label="Souther, J G" frequency="20">
+            <link href="-/(urn:atom:author)souther-j-g" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="earth-sciences" label="earth sciences" frequency="42760">
+            <link href="-/(urn:gc:subject)earth-sciences" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="stratigraphy" label="stratigraphy" frequency="1708">
+            <link href="-/(urn:gc:subject)stratigraphy" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="zip" label="ZIP" frequency="4273">
+            <link href="-/(urn:iso:format)zip" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="british-columbia" label="British Columbia" frequency="9750">
+            <link href="-/(urn:iso:place)british-columbia" rel="related"/>
+        </category>
+        <category scheme="urn:iso:series" term="geological-survey-of-canada-memoir" label="Geological Survey of Canada, Memoir" frequency="13">
+            <link href="-/(urn:iso:series)geological-survey-of-canada-memoir" rel="related"/>
+        </category>
+        <category scheme="urn:iso:type" term="publication" label="Publication" frequency="6043">
+            <link href="-/(urn:iso:type)publication" rel="related"/>
+        </category>
+        <georss:where>
+            <gml:Polygon srsName="EPSG:4326">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>58 -134.5 59 -134.5 59 -132 58 -132 58 -134.5</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </georss:where>
+        <link href="./6fc62fe2-fe56-589d-872b-60b92c986170.xml" rel="alternate"/>
+    </entry>
+    <entry xmlns:app="http://www.w3.org/2007/app">
+        <id>urn:uuid:5b32e4ed-ff6a-5cc1-929f-d24469d6fe79</id>
+        <link href="./5b32e4ed-ff6a-5cc1-929f-d24469d6fe79.xml" rel="self"/>
+        <link href="http://geogratis.gc.ca/api/" rel="profile"/>
+        <link href="./5b32e4ed-ff6a-5cc1-929f-d24469d6fe79.xml/1" rel="edit"/>
+        <as:entryId>5b32e4ed-ff6a-5cc1-929f-d24469d6fe79</as:entryId>
+        <as:updateIndex>1539438</as:updateIndex>
+        <as:revision>0</as:revision>
+        <link href="./5b32e4ed-ff6a-5cc1-929f-d24469d6fe79.html" rel="alternate" type="text/html"/>
+        <link href="./5b32e4ed-ff6a-5cc1-929f-d24469d6fe79.nrcan" rel="alternate" type="application/vnd.nrcan.atom+xml"/>
+        <link href="./5b32e4ed-ff6a-5cc1-929f-d24469d6fe79.naphtml" rel="alternate" type="text/html; profile=&quot;http://nap.geogratis.gc.ca/&quot;"/>
+        <link href="./5b32e4ed-ff6a-5cc1-929f-d24469d6fe79.phtml" rel="alternate" type="text/phtml"/>
+        <link href="./5b32e4ed-ff6a-5cc1-929f-d24469d6fe79.csv" rel="alternate" type="text/csv"/>
+        <link href="./5b32e4ed-ff6a-5cc1-929f-d24469d6fe79.xml" rel="alternate" type="application/xml"/>
+        <link href="./5b32e4ed-ff6a-5cc1-929f-d24469d6fe79.rss" rel="alternate" type="application/rss+xml"/>
+        <link href="./5b32e4ed-ff6a-5cc1-929f-d24469d6fe79.json" rel="alternate" type="application/json"/>
+        <link href="./5b32e4ed-ff6a-5cc1-929f-d24469d6fe79.kml" rel="alternate" type="application/vnd.google-earth.kml+xml"/>
+        <link href="./5b32e4ed-ff6a-5cc1-929f-d24469d6fe79.nap" rel="alternate" type="application/vnd.nrcan.nap+xml"/>
+        <link href="../../../fr/nrcan-rncan/ess-sst/5b32e4ed-ff6a-5cc1-929f-d24469d6fe79.xml" rel="alternate" hreflang="fr" title="Français"/>
+        <link href=".?alt=osdx" rel="search" type="application/opensearchdescription+xml" title="GeoGratis Product Search"/>
+        <updated>2013-09-11T00:15:35.000Z</updated>
+        <app:edited>2013-09-12T16:57:50.283Z</app:edited>
+        <published>1930-01-01T00:00:00.000Z</published>
+        <title type="text">Geology of southern Alberta and southwestern Saskatchewan</title>
+        <author>
+            <name>Dyer, W S; Williams, M Y</name>
+        </author>
+        <summary type="text">Abstract not available. These are comprehensive final reports on the geology of specific geographic areas.</summary>
+        <rights type="text">GEOGRATIS LICENCE AGREEMENT FOR UNRESTRICTED USE OF DIGITAL DATA (http://geogratis.cgdi.gc.ca/geogratis/en/licence.jsp)</rights>
+        <as:locale>en_CA</as:locale>
+        <category scheme="urn:atom:author" term="dyer-w-s" label="Dyer, W S" frequency="4">
+            <link href="-/(urn:atom:author)dyer-w-s" rel="related"/>
+        </category>
+        <category scheme="urn:atom:author" term="williams-m-y" label="Williams, M Y" frequency="16">
+            <link href="-/(urn:atom:author)williams-m-y" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="earth-sciences" label="earth sciences" frequency="42760">
+            <link href="-/(urn:gc:subject)earth-sciences" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="coal" label="coal" frequency="507">
+            <link href="-/(urn:gc:subject)coal" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="production" label="production" frequency="32">
+            <link href="-/(urn:gc:subject)production" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="zip" label="ZIP" frequency="4273">
+            <link href="-/(urn:iso:format)zip" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="saskatchewan" label="Saskatchewan" frequency="8043">
+            <link href="-/(urn:iso:place)saskatchewan" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="alberta" label="Alberta" frequency="7854">
+            <link href="-/(urn:iso:place)alberta" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="alberta-south" label="Alberta, South" frequency="6">
+            <link href="-/(urn:iso:place)alberta-south" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="saskatchewan-southwest" label="Saskatchewan, Southwest" frequency="1">
+            <link href="-/(urn:iso:place)saskatchewan-southwest" rel="related"/>
+        </category>
+        <category scheme="urn:iso:series" term="geological-survey-of-canada-memoir" label="Geological Survey of Canada, Memoir" frequency="13">
+            <link href="-/(urn:iso:series)geological-survey-of-canada-memoir" rel="related"/>
+        </category>
+        <category scheme="urn:iso:type" term="publication" label="Publication" frequency="6043">
+            <link href="-/(urn:iso:type)publication" rel="related"/>
+        </category>
+        <georss:where>
+            <gml:Polygon srsName="EPSG:4326">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>48 -116 52 -116 52 -108 48 -108 48 -116</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </georss:where>
+        <link href="./5b32e4ed-ff6a-5cc1-929f-d24469d6fe79.xml" rel="alternate"/>
+    </entry>
+    <entry xmlns:app="http://www.w3.org/2007/app">
+        <id>urn:uuid:b15fb611-43ff-4811-ab89-cef43c5e493f</id>
+        <link href="./b15fb611-43ff-4811-ab89-cef43c5e493f.xml" rel="self"/>
+        <link href="http://geogratis.gc.ca/api/" rel="profile"/>
+        <link href="./b15fb611-43ff-4811-ab89-cef43c5e493f.xml/1" rel="edit"/>
+        <as:entryId>b15fb611-43ff-4811-ab89-cef43c5e493f</as:entryId>
+        <as:updateIndex>1539437</as:updateIndex>
+        <as:revision>0</as:revision>
+        <link href="./b15fb611-43ff-4811-ab89-cef43c5e493f.html" rel="alternate" type="text/html"/>
+        <link href="./b15fb611-43ff-4811-ab89-cef43c5e493f.nrcan" rel="alternate" type="application/vnd.nrcan.atom+xml"/>
+        <link href="./b15fb611-43ff-4811-ab89-cef43c5e493f.naphtml" rel="alternate" type="text/html; profile=&quot;http://nap.geogratis.gc.ca/&quot;"/>
+        <link href="./b15fb611-43ff-4811-ab89-cef43c5e493f.phtml" rel="alternate" type="text/phtml"/>
+        <link href="./b15fb611-43ff-4811-ab89-cef43c5e493f.csv" rel="alternate" type="text/csv"/>
+        <link href="./b15fb611-43ff-4811-ab89-cef43c5e493f.xml" rel="alternate" type="application/xml"/>
+        <link href="./b15fb611-43ff-4811-ab89-cef43c5e493f.rss" rel="alternate" type="application/rss+xml"/>
+        <link href="./b15fb611-43ff-4811-ab89-cef43c5e493f.json" rel="alternate" type="application/json"/>
+        <link href="./b15fb611-43ff-4811-ab89-cef43c5e493f.kml" rel="alternate" type="application/vnd.google-earth.kml+xml"/>
+        <link href="./b15fb611-43ff-4811-ab89-cef43c5e493f.nap" rel="alternate" type="application/vnd.nrcan.nap+xml"/>
+        <link href="../../../fr/nrcan-rncan/ess-sst/b15fb611-43ff-4811-ab89-cef43c5e493f.xml" rel="alternate" hreflang="fr" title="Français"/>
+        <link href=".?alt=osdx" rel="search" type="application/opensearchdescription+xml" title="GeoGratis Product Search"/>
+        <updated>2013-08-27T15:01:25.000Z</updated>
+        <app:edited>2013-09-12T16:57:49.372Z</app:edited>
+        <published>2013-05-21T00:00:00.000Z</published>
+        <title type="text">CanTopo - 107E04, Northwest Territories</title>
+        <author>
+            <name>Government of Canada, Natural Resources Canada, Earth Sciences Sector, Mapping Information Branch, Centre for Topographic Information - Ottawa</name>
+        </author>
+        <summary type="text">CanTopo is the next generation of topographic maps being produced by Natural Resources Canada. This digital cartographic product originates from the best available data sources covering the Canadian territory and offers a quality cartographic product in vector and raster format that complies with international geomatics standards. CanTopo is a multi-source product generated from the Cartographic Data Base (CDB) described in the Cartographic Data Base (CDB) Product Specification. Data within the CDB comes mainly from the GeoBase initiative (www.geobase.ca), Natural Resources Canada digital topographic data and data from national initiatives. Data from authoritative sources, such as other government agencies both federal and provincial, are identified, stored, and used.</summary>
+        <rights type="text">GEOGRATIS LICENCE AGREEMENT FOR UNRESTRICTED USE OF DIGITAL DATA (http://geogratis.cgdi.gc.ca/geogratis/en/licence.jsp)</rights>
+        <as:locale>en_CA</as:locale>
+        <category scheme="urn:gc:subject" term="earth-sciences" label="earth sciences" frequency="42760">
+            <link href="-/(urn:gc:subject)earth-sciences" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="geographic-data" label="Geographic data" frequency="38018">
+            <link href="-/(urn:gc:subject)geographic-data" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="pdf" label="PDF" frequency="38692">
+            <link href="-/(urn:iso:format)pdf" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="geopdf" label="GeoPDF" frequency="2227">
+            <link href="-/(urn:iso:format)geopdf" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="tiff" label="TIFF" frequency="65643">
+            <link href="-/(urn:iso:format)tiff" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="geotiff" label="GeoTIFF" frequency="54452">
+            <link href="-/(urn:iso:format)geotiff" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="northwest-territories" label="Northwest Territories" frequency="11435">
+            <link href="-/(urn:iso:place)northwest-territories" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="107e04" label="107E04" frequency="3">
+            <link href="-/(urn:iso:place)107e04" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="107e4" label="107E4" frequency="2">
+            <link href="-/(urn:iso:place)107e4" rel="related"/>
+        </category>
+        <category scheme="urn:iso:series" term="cantopo" label="CanTopo" frequency="2227">
+            <link href="-/(urn:iso:series)cantopo" rel="related"/>
+        </category>
+        <category scheme="urn:iso:type" term="map" label="Map" frequency="72481">
+            <link href="-/(urn:iso:type)map" rel="related"/>
+        </category>
+        <georss:where>
+            <gml:Polygon srsName="EPSG:4326">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>70 -132 70.25 -132 70.25 -131 70 -131 70 -132</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </georss:where>
+        <link href="./b15fb611-43ff-4811-ab89-cef43c5e493f.xml" rel="alternate"/>
+    </entry>
+    <entry xmlns:app="http://www.w3.org/2007/app">
+        <id>urn:uuid:880bc16d-2fa0-509d-a985-ecd02fc84abb</id>
+        <link href="./880bc16d-2fa0-509d-a985-ecd02fc84abb.xml" rel="self"/>
+        <link href="http://geogratis.gc.ca/api/" rel="profile"/>
+        <link href="./880bc16d-2fa0-509d-a985-ecd02fc84abb.xml/1" rel="edit"/>
+        <as:entryId>880bc16d-2fa0-509d-a985-ecd02fc84abb</as:entryId>
+        <as:updateIndex>1539435</as:updateIndex>
+        <as:revision>0</as:revision>
+        <link href="./880bc16d-2fa0-509d-a985-ecd02fc84abb.html" rel="alternate" type="text/html"/>
+        <link href="./880bc16d-2fa0-509d-a985-ecd02fc84abb.nrcan" rel="alternate" type="application/vnd.nrcan.atom+xml"/>
+        <link href="./880bc16d-2fa0-509d-a985-ecd02fc84abb.naphtml" rel="alternate" type="text/html; profile=&quot;http://nap.geogratis.gc.ca/&quot;"/>
+        <link href="./880bc16d-2fa0-509d-a985-ecd02fc84abb.phtml" rel="alternate" type="text/phtml"/>
+        <link href="./880bc16d-2fa0-509d-a985-ecd02fc84abb.csv" rel="alternate" type="text/csv"/>
+        <link href="./880bc16d-2fa0-509d-a985-ecd02fc84abb.xml" rel="alternate" type="application/xml"/>
+        <link href="./880bc16d-2fa0-509d-a985-ecd02fc84abb.rss" rel="alternate" type="application/rss+xml"/>
+        <link href="./880bc16d-2fa0-509d-a985-ecd02fc84abb.json" rel="alternate" type="application/json"/>
+        <link href="./880bc16d-2fa0-509d-a985-ecd02fc84abb.kml" rel="alternate" type="application/vnd.google-earth.kml+xml"/>
+        <link href="./880bc16d-2fa0-509d-a985-ecd02fc84abb.nap" rel="alternate" type="application/vnd.nrcan.nap+xml"/>
+        <link href="../../../fr/nrcan-rncan/ess-sst/880bc16d-2fa0-509d-a985-ecd02fc84abb.xml" rel="alternate" hreflang="fr" title="Français"/>
+        <link href=".?alt=osdx" rel="search" type="application/opensearchdescription+xml" title="GeoGratis Product Search"/>
+        <updated>2013-09-06T13:47:33.000Z</updated>
+        <app:edited>2013-09-12T16:57:48.180Z</app:edited>
+        <published>1993-01-01T00:00:00.000Z</published>
+        <title type="text">Sedimentary cover of the craton in Canada</title>
+        <author>
+            <name>Stott, D F; Aitken, J D</name>
+        </author>
+        <summary type="text">Abstract not available.</summary>
+        <rights type="text">GEOGRATIS LICENCE AGREEMENT FOR UNRESTRICTED USE OF DIGITAL DATA (http://geogratis.cgdi.gc.ca/geogratis/en/licence.jsp)</rights>
+        <as:locale>en_CA</as:locale>
+        <category scheme="urn:atom:author" term="stott-d-f" label="Stott, D F" frequency="17">
+            <link href="-/(urn:atom:author)stott-d-f" rel="related"/>
+        </category>
+        <category scheme="urn:atom:author" term="aitken-j-d" label="Aitken, J D" frequency="24">
+            <link href="-/(urn:atom:author)aitken-j-d" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="earth-sciences" label="earth sciences" frequency="42760">
+            <link href="-/(urn:gc:subject)earth-sciences" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="petroleum" label="petroleum" frequency="32">
+            <link href="-/(urn:gc:subject)petroleum" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="coal" label="coal" frequency="507">
+            <link href="-/(urn:gc:subject)coal" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="geothermal-energy" label="geothermal energy" frequency="20">
+            <link href="-/(urn:gc:subject)geothermal-energy" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="groundwater" label="groundwater" frequency="162">
+            <link href="-/(urn:gc:subject)groundwater" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="stratigraphy" label="stratigraphy" frequency="1708">
+            <link href="-/(urn:gc:subject)stratigraphy" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="geophysics" label="geophysics" frequency="16391">
+            <link href="-/(urn:gc:subject)geophysics" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="sedimentology" label="sedimentology" frequency="636">
+            <link href="-/(urn:gc:subject)sedimentology" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="zip" label="ZIP" frequency="4273">
+            <link href="-/(urn:iso:format)zip" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="canada" label="Canada" frequency="7345">
+            <link href="-/(urn:iso:place)canada" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="eastern-offshore-region" label="Eastern offshore region" frequency="1027">
+            <link href="-/(urn:iso:place)eastern-offshore-region" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="new-brunswick" label="New Brunswick" frequency="5641">
+            <link href="-/(urn:iso:place)new-brunswick" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="nova-scotia" label="Nova Scotia" frequency="5822">
+            <link href="-/(urn:iso:place)nova-scotia" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="quebec" label="Quebec" frequency="12122">
+            <link href="-/(urn:iso:place)quebec" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="ontario" label="Ontario" frequency="10480">
+            <link href="-/(urn:iso:place)ontario" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="northern-offshore-region" label="Northern offshore region" frequency="742">
+            <link href="-/(urn:iso:place)northern-offshore-region" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="manitoba" label="Manitoba" frequency="8019">
+            <link href="-/(urn:iso:place)manitoba" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="saskatchewan" label="Saskatchewan" frequency="8043">
+            <link href="-/(urn:iso:place)saskatchewan" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="alberta" label="Alberta" frequency="7854">
+            <link href="-/(urn:iso:place)alberta" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="british-columbia" label="British Columbia" frequency="9750">
+            <link href="-/(urn:iso:place)british-columbia" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="yukon" label="Yukon" frequency="7356">
+            <link href="-/(urn:iso:place)yukon" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="northwest-territories" label="Northwest Territories" frequency="11435">
+            <link href="-/(urn:iso:place)northwest-territories" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="nunavut" label="Nunavut" frequency="17296">
+            <link href="-/(urn:iso:place)nunavut" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="newfoundland-and-labrador" label="Newfoundland and Labrador" frequency="7092">
+            <link href="-/(urn:iso:place)newfoundland-and-labrador" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="labrador" label="Labrador" frequency="747">
+            <link href="-/(urn:iso:place)labrador" rel="related"/>
+        </category>
+        <category scheme="urn:iso:series" term="geological-survey-of-canada-geology-of-canada-series" label="Geological Survey of Canada, Geology of Canada Series" frequency="3">
+            <link href="-/(urn:iso:series)geological-survey-of-canada-geology-of-canada-series" rel="related"/>
+        </category>
+        <category scheme="urn:iso:type" term="publication" label="Publication" frequency="6043">
+            <link href="-/(urn:iso:type)publication" rel="related"/>
+        </category>
+        <georss:where>
+            <gml:Polygon srsName="EPSG:4326">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>42 -114 83 -114 83 -45 42 -45 42 -114</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </georss:where>
+        <link href="./880bc16d-2fa0-509d-a985-ecd02fc84abb.xml" rel="alternate"/>
+    </entry>
+    <entry xmlns:app="http://www.w3.org/2007/app">
+        <id>urn:uuid:972664a2-1bd5-4023-a37d-365ff0714d99</id>
+        <link href="./972664a2-1bd5-4023-a37d-365ff0714d99.xml" rel="self"/>
+        <link href="http://geogratis.gc.ca/api/" rel="profile"/>
+        <link href="./972664a2-1bd5-4023-a37d-365ff0714d99.xml/1" rel="edit"/>
+        <as:entryId>972664a2-1bd5-4023-a37d-365ff0714d99</as:entryId>
+        <as:updateIndex>1539434</as:updateIndex>
+        <as:revision>0</as:revision>
+        <link href="./972664a2-1bd5-4023-a37d-365ff0714d99.html" rel="alternate" type="text/html"/>
+        <link href="./972664a2-1bd5-4023-a37d-365ff0714d99.nrcan" rel="alternate" type="application/vnd.nrcan.atom+xml"/>
+        <link href="./972664a2-1bd5-4023-a37d-365ff0714d99.naphtml" rel="alternate" type="text/html; profile=&quot;http://nap.geogratis.gc.ca/&quot;"/>
+        <link href="./972664a2-1bd5-4023-a37d-365ff0714d99.phtml" rel="alternate" type="text/phtml"/>
+        <link href="./972664a2-1bd5-4023-a37d-365ff0714d99.csv" rel="alternate" type="text/csv"/>
+        <link href="./972664a2-1bd5-4023-a37d-365ff0714d99.xml" rel="alternate" type="application/xml"/>
+        <link href="./972664a2-1bd5-4023-a37d-365ff0714d99.rss" rel="alternate" type="application/rss+xml"/>
+        <link href="./972664a2-1bd5-4023-a37d-365ff0714d99.json" rel="alternate" type="application/json"/>
+        <link href="./972664a2-1bd5-4023-a37d-365ff0714d99.kml" rel="alternate" type="application/vnd.google-earth.kml+xml"/>
+        <link href="./972664a2-1bd5-4023-a37d-365ff0714d99.nap" rel="alternate" type="application/vnd.nrcan.nap+xml"/>
+        <link href="../../../fr/nrcan-rncan/ess-sst/972664a2-1bd5-4023-a37d-365ff0714d99.xml" rel="alternate" hreflang="fr" title="Français"/>
+        <link href=".?alt=osdx" rel="search" type="application/opensearchdescription+xml" title="GeoGratis Product Search"/>
+        <updated>2013-09-03T13:10:17.000Z</updated>
+        <app:edited>2013-09-12T16:57:47.257Z</app:edited>
+        <published>2013-09-03T00:00:00.000Z</published>
+        <title type="text">Toporama - 011N02 - Cape St. Lawrence, Nova Scotia</title>
+        <author>
+            <name>Government of Canada, Natural Resources Canada, Earth Sciences Sector, Mapping Information Branch, Centre for Topographic Information - Sherbrooke</name>
+        </author>
+        <summary type="text">Toporama is a digital topographic reference product developed by Natural Resources Canada (NRCan). It covers the entire area of Canada's landmass and provides topographic, geo-referenced, and symbolic information in a raster format. The delimitation, content and representation of this product are similar to those of 1:50,000 scale topographical maps. Toporama is published as an edition (or "release") approximately every six months. It is available free of charge through the GeoGratis portal (www.GeoGratis.gc.ca) in GeoTIFF format, which is a geo-referenced raster format. Toporama is available in the following spatial reference systems: Universal Transverse Mercator (UTM) and geographic (latitude and longitude). Toporama is a product aimed at the general public that can be used by GPS system users who need a geo-referenced raster map product.</summary>
+        <rights type="text">GEOGRATIS LICENCE AGREEMENT FOR UNRESTRICTED USE OF DIGITAL DATA (http://geogratis.cgdi.gc.ca/geogratis/en/licence.jsp)</rights>
+        <as:locale>en_CA</as:locale>
+        <category scheme="urn:gc:subject" term="earth-sciences" label="earth sciences" frequency="42760">
+            <link href="-/(urn:gc:subject)earth-sciences" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="geographic-data" label="Geographic data" frequency="38018">
+            <link href="-/(urn:gc:subject)geographic-data" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="geotiff" label="GeoTIFF" frequency="54452">
+            <link href="-/(urn:iso:format)geotiff" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="nova-scotia" label="Nova Scotia" frequency="5822">
+            <link href="-/(urn:iso:place)nova-scotia" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="cape-st-lawrence" label="Cape st. lawrence" frequency="5">
+            <link href="-/(urn:iso:place)cape-st-lawrence" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="011n02" label="011N02" frequency="6">
+            <link href="-/(urn:iso:place)011n02" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="11n02" label="11N02" frequency="1">
+            <link href="-/(urn:iso:place)11n02" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="11n2" label="11N2" frequency="1">
+            <link href="-/(urn:iso:place)11n2" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="011n2" label="011N2" frequency="1">
+            <link href="-/(urn:iso:place)011n2" rel="related"/>
+        </category>
+        <category scheme="urn:iso:series" term="toporama" label="Toporama" frequency="14880">
+            <link href="-/(urn:iso:series)toporama" rel="related"/>
+        </category>
+        <category scheme="urn:iso:type" term="map" label="Map" frequency="72481">
+            <link href="-/(urn:iso:type)map" rel="related"/>
+        </category>
+        <georss:where>
+            <gml:Polygon srsName="EPSG:4326">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>47 -61 47.25 -61 47.25 -60.5 47 -60.5 47 -61</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </georss:where>
+        <link href="./972664a2-1bd5-4023-a37d-365ff0714d99.xml" rel="alternate"/>
+    </entry>
+    <entry xmlns:app="http://www.w3.org/2007/app">
+        <id>urn:uuid:c7205c1f-94da-55a6-8c88-153bebb70821</id>
+        <link href="./c7205c1f-94da-55a6-8c88-153bebb70821.xml" rel="self"/>
+        <link href="http://geogratis.gc.ca/api/" rel="profile"/>
+        <link href="./c7205c1f-94da-55a6-8c88-153bebb70821.xml/1" rel="edit"/>
+        <as:entryId>c7205c1f-94da-55a6-8c88-153bebb70821</as:entryId>
+        <as:updateIndex>1539429</as:updateIndex>
+        <as:revision>0</as:revision>
+        <link href="./c7205c1f-94da-55a6-8c88-153bebb70821.html" rel="alternate" type="text/html"/>
+        <link href="./c7205c1f-94da-55a6-8c88-153bebb70821.nrcan" rel="alternate" type="application/vnd.nrcan.atom+xml"/>
+        <link href="./c7205c1f-94da-55a6-8c88-153bebb70821.naphtml" rel="alternate" type="text/html; profile=&quot;http://nap.geogratis.gc.ca/&quot;"/>
+        <link href="./c7205c1f-94da-55a6-8c88-153bebb70821.phtml" rel="alternate" type="text/phtml"/>
+        <link href="./c7205c1f-94da-55a6-8c88-153bebb70821.csv" rel="alternate" type="text/csv"/>
+        <link href="./c7205c1f-94da-55a6-8c88-153bebb70821.xml" rel="alternate" type="application/xml"/>
+        <link href="./c7205c1f-94da-55a6-8c88-153bebb70821.rss" rel="alternate" type="application/rss+xml"/>
+        <link href="./c7205c1f-94da-55a6-8c88-153bebb70821.json" rel="alternate" type="application/json"/>
+        <link href="./c7205c1f-94da-55a6-8c88-153bebb70821.kml" rel="alternate" type="application/vnd.google-earth.kml+xml"/>
+        <link href="./c7205c1f-94da-55a6-8c88-153bebb70821.nap" rel="alternate" type="application/vnd.nrcan.nap+xml"/>
+        <link href="../../../fr/nrcan-rncan/ess-sst/c7205c1f-94da-55a6-8c88-153bebb70821.xml" rel="alternate" hreflang="fr" title="Français"/>
+        <link href=".?alt=osdx" rel="search" type="application/opensearchdescription+xml" title="GeoGratis Product Search"/>
+        <updated>2013-09-06T19:24:35.000Z</updated>
+        <app:edited>2013-09-12T16:57:44.439Z</app:edited>
+        <published>2013-01-01T00:00:00.000Z</published>
+        <title type="text">Canadian inventory of groundwater resources: integrated regional hydrogeological characterization of the fractured aquifer system of southwestern Quebec</title>
+        <author>
+            <name>Savard, M M</name>
+        </author>
+        <summary type="text">The aquifer system in the Lower Laurentians region of southwestern Quebec is hosted primarily by Cambro-Ordovician fractured sedimentary rocks that are part of the geological province known as the St. Lawrence Platform. The most transmissive unit of the aquifer is found at the top of the rock sequence and consists of highly fractured rocks and a layer of glaciofluvial Quaternary sediments. The floor of the aquifer is located 100 m below the surface, where the rocks become less permeable, and the aquifer is capped by Quaternary deposits of till and clay. In terms of quality as it relates to human health, an evaluation of exceedances of government criteria indicates that groundwater quality throughout most of the study area is good. At the regional level, groundwater is relatively uncontaminated by human activities. The study area was subdivided into seven sectors, which were classified on the basis of relative groundwater quality. The sectors with the highest groundwater quality are Saint-Hermas, Rivière du Nord, and a sector made up of the three subsectors of Lachute/Saint-Janvier, Sainte- Monique/Saint-Eustache, and Côte Saint-Vincent. The areas most vulnerable to contamination from the surface occupy approximately 35% of the study area. The remaining 65% is naturally protected by impermeable till and clay layers. The rate of anthropogenic use of groundwater during the study period was 14.8 x 106 m3/a, equivalent to a water depth of 11 mm/a throughout the area. The primary uses of groundwater are human consumption (42%), quarry operations (37%) and, to a lesser extent, agricultural consumption (17%). Golf course irrigation (~1%) and commercial water bottling (3%) account for a small percentage of current use. The annual rate of total extraction for human activities is considered to be sustainable because the resulting drawdown does not exceed the average natural fluctuation in piezometric levels. In some areas, annual extraction could be sustainably increased to as much as 26 x 106 m3/a.</summary>
+        <rights type="text">GEOGRATIS LICENCE AGREEMENT FOR UNRESTRICTED USE OF DIGITAL DATA (http://geogratis.cgdi.gc.ca/geogratis/en/licence.jsp)</rights>
+        <as:locale>en_CA</as:locale>
+        <category scheme="urn:atom:author" term="savard-m-m" label="Savard, M M" frequency="9">
+            <link href="-/(urn:atom:author)savard-m-m" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="earth-sciences" label="earth sciences" frequency="42760">
+            <link href="-/(urn:gc:subject)earth-sciences" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="water-quality" label="water quality" frequency="39">
+            <link href="-/(urn:gc:subject)water-quality" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="software" label="software" frequency="63">
+            <link href="-/(urn:gc:subject)software" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="pdf" label="PDF" frequency="38692">
+            <link href="-/(urn:iso:format)pdf" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="quebec" label="Quebec" frequency="12122">
+            <link href="-/(urn:iso:place)quebec" rel="related"/>
+        </category>
+        <category scheme="urn:iso:series" term="geological-survey-of-canada-bulletin" label="Geological Survey of Canada, Bulletin" frequency="142">
+            <link href="-/(urn:iso:series)geological-survey-of-canada-bulletin" rel="related"/>
+        </category>
+        <category scheme="urn:iso:type" term="publication" label="Publication" frequency="6043">
+            <link href="-/(urn:iso:type)publication" rel="related"/>
+        </category>
+        <georss:where>
+            <gml:Polygon srsName="EPSG:4326">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>45.5 -74.5 45.75 -74.5 45.75 -73.5 45.5 -73.5 45.5 -74.5</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </georss:where>
+        <link href="./c7205c1f-94da-55a6-8c88-153bebb70821.xml" rel="alternate"/>
+    </entry>
+    <entry xmlns:app="http://www.w3.org/2007/app">
+        <id>urn:uuid:651d0159-9b73-49d3-9795-b29b527a1386</id>
+        <link href="./651d0159-9b73-49d3-9795-b29b527a1386.xml" rel="self"/>
+        <link href="http://geogratis.gc.ca/api/" rel="profile"/>
+        <link href="./651d0159-9b73-49d3-9795-b29b527a1386.xml/1" rel="edit"/>
+        <as:entryId>651d0159-9b73-49d3-9795-b29b527a1386</as:entryId>
+        <as:updateIndex>1539427</as:updateIndex>
+        <as:revision>0</as:revision>
+        <link href="./651d0159-9b73-49d3-9795-b29b527a1386.html" rel="alternate" type="text/html"/>
+        <link href="./651d0159-9b73-49d3-9795-b29b527a1386.nrcan" rel="alternate" type="application/vnd.nrcan.atom+xml"/>
+        <link href="./651d0159-9b73-49d3-9795-b29b527a1386.naphtml" rel="alternate" type="text/html; profile=&quot;http://nap.geogratis.gc.ca/&quot;"/>
+        <link href="./651d0159-9b73-49d3-9795-b29b527a1386.phtml" rel="alternate" type="text/phtml"/>
+        <link href="./651d0159-9b73-49d3-9795-b29b527a1386.csv" rel="alternate" type="text/csv"/>
+        <link href="./651d0159-9b73-49d3-9795-b29b527a1386.xml" rel="alternate" type="application/xml"/>
+        <link href="./651d0159-9b73-49d3-9795-b29b527a1386.rss" rel="alternate" type="application/rss+xml"/>
+        <link href="./651d0159-9b73-49d3-9795-b29b527a1386.json" rel="alternate" type="application/json"/>
+        <link href="./651d0159-9b73-49d3-9795-b29b527a1386.kml" rel="alternate" type="application/vnd.google-earth.kml+xml"/>
+        <link href="./651d0159-9b73-49d3-9795-b29b527a1386.nap" rel="alternate" type="application/vnd.nrcan.nap+xml"/>
+        <link href="../../../fr/nrcan-rncan/ess-sst/651d0159-9b73-49d3-9795-b29b527a1386.xml" rel="alternate" hreflang="fr" title="Français"/>
+        <link href=".?alt=osdx" rel="search" type="application/opensearchdescription+xml" title="GeoGratis Product Search"/>
+        <updated>2013-09-03T13:08:42.000Z</updated>
+        <app:edited>2013-09-12T16:57:42.626Z</app:edited>
+        <published>2013-09-03T00:00:00.000Z</published>
+        <title type="text">Toporama - 036F15</title>
+        <author>
+            <name>Government of Canada, Natural Resources Canada, Earth Sciences Sector, Mapping Information Branch, Centre for Topographic Information - Sherbrooke</name>
+        </author>
+        <summary type="text">Toporama is a digital topographic reference product developed by Natural Resources Canada (NRCan). It covers the entire area of Canada's landmass and provides topographic, geo-referenced, and symbolic information in a raster format. The delimitation, content and representation of this product are similar to those of 1:50,000 scale topographical maps. Toporama is published as an edition (or "release") approximately every six months. It is available free of charge through the GeoGratis portal (www.GeoGratis.gc.ca) in GeoTIFF format, which is a geo-referenced raster format. Toporama is available in the following spatial reference systems: Universal Transverse Mercator (UTM) and geographic (latitude and longitude). Toporama is a product aimed at the general public that can be used by GPS system users who need a geo-referenced raster map product.</summary>
+        <rights type="text">GEOGRATIS LICENCE AGREEMENT FOR UNRESTRICTED USE OF DIGITAL DATA (http://geogratis.cgdi.gc.ca/geogratis/en/licence.jsp)</rights>
+        <as:locale>en_CA</as:locale>
+        <category scheme="urn:gc:subject" term="earth-sciences" label="earth sciences" frequency="42760">
+            <link href="-/(urn:gc:subject)earth-sciences" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="geographic-data" label="Geographic data" frequency="38018">
+            <link href="-/(urn:gc:subject)geographic-data" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="geotiff" label="GeoTIFF" frequency="54452">
+            <link href="-/(urn:iso:format)geotiff" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="canada" label="Canada" frequency="7345">
+            <link href="-/(urn:iso:place)canada" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="036f15" label="036F15" frequency="1">
+            <link href="-/(urn:iso:place)036f15" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="36f15" label="36F15" frequency="1">
+            <link href="-/(urn:iso:place)36f15" rel="related"/>
+        </category>
+        <category scheme="urn:iso:series" term="toporama" label="Toporama" frequency="14880">
+            <link href="-/(urn:iso:series)toporama" rel="related"/>
+        </category>
+        <category scheme="urn:iso:type" term="map" label="Map" frequency="72481">
+            <link href="-/(urn:iso:type)map" rel="related"/>
+        </category>
+        <georss:where>
+            <gml:Polygon srsName="EPSG:4326">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>65.75 -77 66 -77 66 -76.5 65.75 -76.5 65.75 -77</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </georss:where>
+        <link href="./651d0159-9b73-49d3-9795-b29b527a1386.xml" rel="alternate"/>
+    </entry>
+    <entry xmlns:app="http://www.w3.org/2007/app">
+        <id>urn:uuid:1fd97f7a-a3ba-50f0-b9c0-de189b4f9ec7</id>
+        <link href="./1fd97f7a-a3ba-50f0-b9c0-de189b4f9ec7.xml" rel="self"/>
+        <link href="http://geogratis.gc.ca/api/" rel="profile"/>
+        <link href="./1fd97f7a-a3ba-50f0-b9c0-de189b4f9ec7.xml/1" rel="edit"/>
+        <as:entryId>1fd97f7a-a3ba-50f0-b9c0-de189b4f9ec7</as:entryId>
+        <as:updateIndex>1539426</as:updateIndex>
+        <as:revision>0</as:revision>
+        <link href="./1fd97f7a-a3ba-50f0-b9c0-de189b4f9ec7.html" rel="alternate" type="text/html"/>
+        <link href="./1fd97f7a-a3ba-50f0-b9c0-de189b4f9ec7.nrcan" rel="alternate" type="application/vnd.nrcan.atom+xml"/>
+        <link href="./1fd97f7a-a3ba-50f0-b9c0-de189b4f9ec7.naphtml" rel="alternate" type="text/html; profile=&quot;http://nap.geogratis.gc.ca/&quot;"/>
+        <link href="./1fd97f7a-a3ba-50f0-b9c0-de189b4f9ec7.phtml" rel="alternate" type="text/phtml"/>
+        <link href="./1fd97f7a-a3ba-50f0-b9c0-de189b4f9ec7.csv" rel="alternate" type="text/csv"/>
+        <link href="./1fd97f7a-a3ba-50f0-b9c0-de189b4f9ec7.xml" rel="alternate" type="application/xml"/>
+        <link href="./1fd97f7a-a3ba-50f0-b9c0-de189b4f9ec7.rss" rel="alternate" type="application/rss+xml"/>
+        <link href="./1fd97f7a-a3ba-50f0-b9c0-de189b4f9ec7.json" rel="alternate" type="application/json"/>
+        <link href="./1fd97f7a-a3ba-50f0-b9c0-de189b4f9ec7.kml" rel="alternate" type="application/vnd.google-earth.kml+xml"/>
+        <link href="./1fd97f7a-a3ba-50f0-b9c0-de189b4f9ec7.nap" rel="alternate" type="application/vnd.nrcan.nap+xml"/>
+        <link href="../../../fr/nrcan-rncan/ess-sst/1fd97f7a-a3ba-50f0-b9c0-de189b4f9ec7.xml" rel="alternate" hreflang="fr" title="Français"/>
+        <link href=".?alt=osdx" rel="search" type="application/opensearchdescription+xml" title="GeoGratis Product Search"/>
+        <updated>2013-09-12T00:16:10.000Z</updated>
+        <app:edited>2013-09-12T16:57:42.281Z</app:edited>
+        <published>1978-01-01T00:00:00.000Z</published>
+        <title type="text">Current research: part A</title>
+        <author>
+            <name>Blackadar, R G; Griffin, P J; Dumych, H; Irish, E J W; Geological Survey of Canada</name>
+        </author>
+        <summary type="text">Abstract not available.</summary>
+        <rights type="text">GEOGRATIS LICENCE AGREEMENT FOR UNRESTRICTED USE OF DIGITAL DATA (http://geogratis.cgdi.gc.ca/geogratis/en/licence.jsp)</rights>
+        <as:locale>en_CA</as:locale>
+        <category scheme="urn:atom:author" term="blackadar-r-g" label="Blackadar, R G" frequency="36">
+            <link href="-/(urn:atom:author)blackadar-r-g" rel="related"/>
+        </category>
+        <category scheme="urn:atom:author" term="griffin-p-j" label="Griffin, P J" frequency="3">
+            <link href="-/(urn:atom:author)griffin-p-j" rel="related"/>
+        </category>
+        <category scheme="urn:atom:author" term="dumych-h" label="Dumych, H" frequency="4">
+            <link href="-/(urn:atom:author)dumych-h" rel="related"/>
+        </category>
+        <category scheme="urn:atom:author" term="irish-e-j-w" label="Irish, E J W" frequency="20">
+            <link href="-/(urn:atom:author)irish-e-j-w" rel="related"/>
+        </category>
+        <category scheme="urn:atom:author" term="geological-survey-of-canada" label="Geological Survey of Canada" frequency="10899">
+            <link href="-/(urn:atom:author)geological-survey-of-canada" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="earth-sciences" label="earth sciences" frequency="42760">
+            <link href="-/(urn:gc:subject)earth-sciences" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="pdf" label="PDF" frequency="38692">
+            <link href="-/(urn:iso:format)pdf" rel="related"/>
+        </category>
+        <category scheme="urn:iso:series" term="geological-survey-of-canada-paper" label="Geological Survey of Canada, Paper" frequency="228">
+            <link href="-/(urn:iso:series)geological-survey-of-canada-paper" rel="related"/>
+        </category>
+        <category scheme="urn:iso:type" term="publication" label="Publication" frequency="6043">
+            <link href="-/(urn:iso:type)publication" rel="related"/>
+        </category>
+        <georss:where>
+            <gml:Polygon srsName="EPSG:4326">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>41 -141 90 -141 90 -50 41 -50 41 -141</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </georss:where>
+        <link href="./1fd97f7a-a3ba-50f0-b9c0-de189b4f9ec7.xml" rel="alternate"/>
+    </entry>
+    <entry xmlns:app="http://www.w3.org/2007/app">
+        <id>urn:uuid:e60e0ff1-1607-58d8-b9a6-a6464132c9fe</id>
+        <link href="./e60e0ff1-1607-58d8-b9a6-a6464132c9fe.xml" rel="self"/>
+        <link href="http://geogratis.gc.ca/api/" rel="profile"/>
+        <link href="./e60e0ff1-1607-58d8-b9a6-a6464132c9fe.xml/1" rel="edit"/>
+        <as:entryId>e60e0ff1-1607-58d8-b9a6-a6464132c9fe</as:entryId>
+        <as:updateIndex>1539425</as:updateIndex>
+        <as:revision>0</as:revision>
+        <link href="./e60e0ff1-1607-58d8-b9a6-a6464132c9fe.html" rel="alternate" type="text/html"/>
+        <link href="./e60e0ff1-1607-58d8-b9a6-a6464132c9fe.nrcan" rel="alternate" type="application/vnd.nrcan.atom+xml"/>
+        <link href="./e60e0ff1-1607-58d8-b9a6-a6464132c9fe.naphtml" rel="alternate" type="text/html; profile=&quot;http://nap.geogratis.gc.ca/&quot;"/>
+        <link href="./e60e0ff1-1607-58d8-b9a6-a6464132c9fe.phtml" rel="alternate" type="text/phtml"/>
+        <link href="./e60e0ff1-1607-58d8-b9a6-a6464132c9fe.csv" rel="alternate" type="text/csv"/>
+        <link href="./e60e0ff1-1607-58d8-b9a6-a6464132c9fe.xml" rel="alternate" type="application/xml"/>
+        <link href="./e60e0ff1-1607-58d8-b9a6-a6464132c9fe.rss" rel="alternate" type="application/rss+xml"/>
+        <link href="./e60e0ff1-1607-58d8-b9a6-a6464132c9fe.json" rel="alternate" type="application/json"/>
+        <link href="./e60e0ff1-1607-58d8-b9a6-a6464132c9fe.kml" rel="alternate" type="application/vnd.google-earth.kml+xml"/>
+        <link href="./e60e0ff1-1607-58d8-b9a6-a6464132c9fe.nap" rel="alternate" type="application/vnd.nrcan.nap+xml"/>
+        <link href="../../../fr/nrcan-rncan/ess-sst/e60e0ff1-1607-58d8-b9a6-a6464132c9fe.xml" rel="alternate" hreflang="fr" title="Français"/>
+        <link href=".?alt=osdx" rel="search" type="application/opensearchdescription+xml" title="GeoGratis Product Search"/>
+        <updated>2013-09-06T19:30:43.000Z</updated>
+        <app:edited>2013-09-12T16:57:41.278Z</app:edited>
+        <published>2013-01-01T00:00:00.000Z</published>
+        <title type="text">Glacial stratigraphy of the Pine Point Pb-Zn mine site, Northwest Territories</title>
+        <author>
+            <name>Rice, J M; Paulen, R C; Menzies, J M; McClenaghan, M B; Oviatt, N M</name>
+        </author>
+        <summary type="text">With increased focus on the practical applications of glacial-drift prospecting, especially in northern Canadian regions, a firm understanding of the glacial history of the region is becoming increasingly important. The past-producing Pine Point mine, Northwest Territories, offers an ideal location to further this understanding as it provides large sections of unaltered till facies, which overlie low-relief bedrock. Field research in the area has used visual observations, clast fabrics, grain-size analysis, geochemical analysis, heavy-mineral concentrates, striation measurements, and pebble lithologies to determine the glacial history of the region. This information will then be used in conjunction with indicator-mineral work in the area to develop a better understanding of how to explore for Mississippi Valley-type Pb-Zn deposits and the transportation history of their indicator minerals.</summary>
+        <rights type="text">GEOGRATIS LICENCE AGREEMENT FOR UNRESTRICTED USE OF DIGITAL DATA (http://geogratis.cgdi.gc.ca/geogratis/en/licence.jsp)</rights>
+        <as:locale>en_CA</as:locale>
+        <category scheme="urn:atom:author" term="rice-j-m" label="Rice, J M" frequency="1">
+            <link href="-/(urn:atom:author)rice-j-m" rel="related"/>
+        </category>
+        <category scheme="urn:atom:author" term="paulen-r-c" label="Paulen, R C" frequency="32">
+            <link href="-/(urn:atom:author)paulen-r-c" rel="related"/>
+        </category>
+        <category scheme="urn:atom:author" term="menzies-j-m" label="Menzies, J M">
+            <link href="-/(urn:atom:author)menzies-j-m" rel="related"/>
+        </category>
+        <category scheme="urn:atom:author" term="mcclenaghan-m-b" label="McClenaghan, M B" frequency="47">
+            <link href="-/(urn:atom:author)mcclenaghan-m-b" rel="related"/>
+        </category>
+        <category scheme="urn:atom:author" term="oviatt-n-m" label="Oviatt, N M" frequency="2">
+            <link href="-/(urn:atom:author)oviatt-n-m" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="earth-sciences" label="earth sciences" frequency="42760">
+            <link href="-/(urn:gc:subject)earth-sciences" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="lead" label="lead" frequency="460">
+            <link href="-/(urn:gc:subject)lead" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="geochemistry" label="geochemistry" frequency="1026">
+            <link href="-/(urn:gc:subject)geochemistry" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="pdf" label="PDF" frequency="38692">
+            <link href="-/(urn:iso:format)pdf" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="northwest-territories" label="Northwest Territories" frequency="11435">
+            <link href="-/(urn:iso:place)northwest-territories" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="pine-point" label="Pine Point" frequency="10">
+            <link href="-/(urn:iso:place)pine-point" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="great-slave-lake" label="Great Slave Lake" frequency="35">
+            <link href="-/(urn:iso:place)great-slave-lake" rel="related"/>
+        </category>
+        <category scheme="urn:iso:series" term="geological-survey-of-canada-current-research-online" label="Geological Survey of Canada, Current Research (Online)" frequency="477">
+            <link href="-/(urn:iso:series)geological-survey-of-canada-current-research-online" rel="related"/>
+        </category>
+        <category scheme="urn:iso:type" term="publication" label="Publication" frequency="6043">
+            <link href="-/(urn:iso:type)publication" rel="related"/>
+        </category>
+        <georss:where>
+            <gml:Polygon srsName="EPSG:4326">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>60.75 -115 61 -115 61 -114 60.75 -114 60.75 -115</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </georss:where>
+        <link href="./e60e0ff1-1607-58d8-b9a6-a6464132c9fe.xml" rel="alternate"/>
+    </entry>
+    <entry xmlns:app="http://www.w3.org/2007/app">
+        <id>urn:uuid:49f0370d-e739-5a6c-88cf-6ed3b6ae08a8</id>
+        <link href="./49f0370d-e739-5a6c-88cf-6ed3b6ae08a8.xml" rel="self"/>
+        <link href="http://geogratis.gc.ca/api/" rel="profile"/>
+        <link href="./49f0370d-e739-5a6c-88cf-6ed3b6ae08a8.xml/1" rel="edit"/>
+        <as:entryId>49f0370d-e739-5a6c-88cf-6ed3b6ae08a8</as:entryId>
+        <as:updateIndex>1539424</as:updateIndex>
+        <as:revision>0</as:revision>
+        <link href="./49f0370d-e739-5a6c-88cf-6ed3b6ae08a8.html" rel="alternate" type="text/html"/>
+        <link href="./49f0370d-e739-5a6c-88cf-6ed3b6ae08a8.nrcan" rel="alternate" type="application/vnd.nrcan.atom+xml"/>
+        <link href="./49f0370d-e739-5a6c-88cf-6ed3b6ae08a8.naphtml" rel="alternate" type="text/html; profile=&quot;http://nap.geogratis.gc.ca/&quot;"/>
+        <link href="./49f0370d-e739-5a6c-88cf-6ed3b6ae08a8.phtml" rel="alternate" type="text/phtml"/>
+        <link href="./49f0370d-e739-5a6c-88cf-6ed3b6ae08a8.csv" rel="alternate" type="text/csv"/>
+        <link href="./49f0370d-e739-5a6c-88cf-6ed3b6ae08a8.xml" rel="alternate" type="application/xml"/>
+        <link href="./49f0370d-e739-5a6c-88cf-6ed3b6ae08a8.rss" rel="alternate" type="application/rss+xml"/>
+        <link href="./49f0370d-e739-5a6c-88cf-6ed3b6ae08a8.json" rel="alternate" type="application/json"/>
+        <link href="./49f0370d-e739-5a6c-88cf-6ed3b6ae08a8.kml" rel="alternate" type="application/vnd.google-earth.kml+xml"/>
+        <link href="./49f0370d-e739-5a6c-88cf-6ed3b6ae08a8.nap" rel="alternate" type="application/vnd.nrcan.nap+xml"/>
+        <link href="../../../fr/nrcan-rncan/ess-sst/49f0370d-e739-5a6c-88cf-6ed3b6ae08a8.xml" rel="alternate" hreflang="fr" title="Français"/>
+        <link href=".?alt=osdx" rel="search" type="application/opensearchdescription+xml" title="GeoGratis Product Search"/>
+        <updated>2013-09-06T14:23:27.000Z</updated>
+        <app:edited>2013-09-12T16:57:40.968Z</app:edited>
+        <published>1997-01-01T00:00:00.000Z</published>
+        <title type="text">Taxonomy and biostratigraphy of Middle and Late Triassic elasmobranch ichthyoliths from northeastern British Columbia</title>
+        <author>
+            <name>Johns, M J; Barnes, C R; Orchard, M J</name>
+        </author>
+        <summary type="text">Diverse and abundant Middle and Late Triassic elasmobranch ichthyoliths (microscopic shark teeth and scales) coexisting with conodonts, ammonoids, and bivalves were recovered from carbonates of the Pardonet, Baldonnel, Ludington, and Liard formations in the Peace River area of British Columbia. These faunas provide an excellent biostratigraphical framework for Triassic strata. Results from this study demonstrate that ichthyoliths can be used in basin analyses to date and correlate strata. The following summarizes the main achievements of this project. 1. Systematic description and illustration of Triassic elasmobranch ichthyoliths include seven species of teeth and nineteen new form genera and fifty-three new form species of scales. 2. Ichthyolith distributions consist of distinct faunal assemblages for the Ladinian, Upper Carnian, and Middle Norian. The Carnian/Norian boundary is marked by the disappearance of many Ladinian and Carnian elasmobranch species. In the Middle Norian, elasmobranch faunas reached a new peak of diversity and abundance. 3. A provisional ichthyolith zonation for the Middle and Upper Triassic is proposed for the Peace River area. The sequence of coeval conodonts and (or) ammonoids indicate that the Coniunctio aequirugosa ichthyolith Zone is Ladinian, the Synechodus multinodosus ichthyolith Zone is Upper Carnian, and the Synechodus incrementum ichthyolith Zone is Lower and Middle Norian. 4. New approaches to ichthyolith identification include recognizing diagnostic characteristics of scale and tooth bases, and using binomial, form, and utilitarian taxonomic systems. 5. Interpretations of histological and morphological features of elasmobranch teeth suggest that more derived neoselachian species than were originally known are present in the Triassic.</summary>
+        <rights type="text">GEOGRATIS LICENCE AGREEMENT FOR UNRESTRICTED USE OF DIGITAL DATA (http://geogratis.cgdi.gc.ca/geogratis/en/licence.jsp)</rights>
+        <as:locale>en_CA</as:locale>
+        <category scheme="urn:atom:author" term="johns-m-j" label="Johns, M J" frequency="2">
+            <link href="-/(urn:atom:author)johns-m-j" rel="related"/>
+        </category>
+        <category scheme="urn:atom:author" term="barnes-c-r" label="Barnes, C R" frequency="3">
+            <link href="-/(urn:atom:author)barnes-c-r" rel="related"/>
+        </category>
+        <category scheme="urn:atom:author" term="orchard-m-j" label="Orchard, M J" frequency="9">
+            <link href="-/(urn:atom:author)orchard-m-j" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="earth-sciences" label="earth sciences" frequency="42760">
+            <link href="-/(urn:gc:subject)earth-sciences" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="taxonomy" label="taxonomy" frequency="10">
+            <link href="-/(urn:gc:subject)taxonomy" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="fossils" label="fossils" frequency="270">
+            <link href="-/(urn:gc:subject)fossils" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="stratigraphy" label="stratigraphy" frequency="1708">
+            <link href="-/(urn:gc:subject)stratigraphy" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="zip" label="ZIP" frequency="4273">
+            <link href="-/(urn:iso:format)zip" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="british-columbia" label="British Columbia" frequency="9750">
+            <link href="-/(urn:iso:place)british-columbia" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="peace-river" label="Peace River" frequency="58">
+            <link href="-/(urn:iso:place)peace-river" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="williston-lake" label="Williston Lake" frequency="9">
+            <link href="-/(urn:iso:place)williston-lake" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="graham-river" label="Graham River">
+            <link href="-/(urn:iso:place)graham-river" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="halfway-river" label="Halfway River" frequency="6">
+            <link href="-/(urn:iso:place)halfway-river" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="pine-river" label="Pine River" frequency="10">
+            <link href="-/(urn:iso:place)pine-river" rel="related"/>
+        </category>
+        <category scheme="urn:iso:series" term="geological-survey-of-canada-bulletin" label="Geological Survey of Canada, Bulletin" frequency="142">
+            <link href="-/(urn:iso:series)geological-survey-of-canada-bulletin" rel="related"/>
+        </category>
+        <category scheme="urn:iso:type" term="publication" label="Publication" frequency="6043">
+            <link href="-/(urn:iso:type)publication" rel="related"/>
+        </category>
+        <georss:where>
+            <gml:Polygon srsName="EPSG:4326">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>55.75 -123.5 57.25 -123.5 57.25 -122 55.75 -122 55.75 -123.5</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </georss:where>
+        <link href="./49f0370d-e739-5a6c-88cf-6ed3b6ae08a8.xml" rel="alternate"/>
+    </entry>
+    <entry xmlns:app="http://www.w3.org/2007/app">
+        <id>urn:uuid:76276fbe-d229-40b9-9a6a-8d46691d61ae</id>
+        <link href="./76276fbe-d229-40b9-9a6a-8d46691d61ae.xml" rel="self"/>
+        <link href="http://geogratis.gc.ca/api/" rel="profile"/>
+        <link href="./76276fbe-d229-40b9-9a6a-8d46691d61ae.xml/1" rel="edit"/>
+        <as:entryId>76276fbe-d229-40b9-9a6a-8d46691d61ae</as:entryId>
+        <as:updateIndex>1539422</as:updateIndex>
+        <as:revision>0</as:revision>
+        <link href="./76276fbe-d229-40b9-9a6a-8d46691d61ae.html" rel="alternate" type="text/html"/>
+        <link href="./76276fbe-d229-40b9-9a6a-8d46691d61ae.nrcan" rel="alternate" type="application/vnd.nrcan.atom+xml"/>
+        <link href="./76276fbe-d229-40b9-9a6a-8d46691d61ae.naphtml" rel="alternate" type="text/html; profile=&quot;http://nap.geogratis.gc.ca/&quot;"/>
+        <link href="./76276fbe-d229-40b9-9a6a-8d46691d61ae.phtml" rel="alternate" type="text/phtml"/>
+        <link href="./76276fbe-d229-40b9-9a6a-8d46691d61ae.csv" rel="alternate" type="text/csv"/>
+        <link href="./76276fbe-d229-40b9-9a6a-8d46691d61ae.xml" rel="alternate" type="application/xml"/>
+        <link href="./76276fbe-d229-40b9-9a6a-8d46691d61ae.rss" rel="alternate" type="application/rss+xml"/>
+        <link href="./76276fbe-d229-40b9-9a6a-8d46691d61ae.json" rel="alternate" type="application/json"/>
+        <link href="./76276fbe-d229-40b9-9a6a-8d46691d61ae.kml" rel="alternate" type="application/vnd.google-earth.kml+xml"/>
+        <link href="./76276fbe-d229-40b9-9a6a-8d46691d61ae.nap" rel="alternate" type="application/vnd.nrcan.nap+xml"/>
+        <link href="../../../fr/nrcan-rncan/ess-sst/76276fbe-d229-40b9-9a6a-8d46691d61ae.xml" rel="alternate" hreflang="fr" title="Français"/>
+        <link href=".?alt=osdx" rel="search" type="application/opensearchdescription+xml" title="GeoGratis Product Search"/>
+        <updated>2013-07-26T09:25:05.000Z</updated>
+        <app:edited>2013-09-12T16:57:39.056Z</app:edited>
+        <published>2013-07-19T00:00:00.000Z</published>
+        <title type="text">Toporama - 032N11 - Lac Boisrobert, Quebec</title>
+        <author>
+            <name>Government of Canada, Natural Resources Canada, Earth Sciences Sector, Mapping Information Branch, Centre for Topographic Information - Sherbrooke</name>
+        </author>
+        <summary type="text">Toporama is a digital topographic reference product developed by Natural Resources Canada (NRCan). It covers the entire area of Canada's landmass and provides topographic, geo-referenced, and symbolic information in a raster format. The delimitation, content and representation of this product are similar to those of 1:50,000 scale topographical maps. Toporama is published as an edition (or "release") approximately every six months. It is available free of charge through the GeoGratis portal (www.GeoGratis.gc.ca) in GeoTIFF format, which is a geo-referenced raster format. Toporama is available in the following spatial reference systems: Universal Transverse Mercator (UTM) and geographic (latitude and longitude). Toporama is a product aimed at the general public that can be used by GPS system users who need a geo-referenced raster map product.</summary>
+        <rights type="text">GEOGRATIS LICENCE AGREEMENT FOR UNRESTRICTED USE OF DIGITAL DATA (http://geogratis.cgdi.gc.ca/geogratis/en/licence.jsp)</rights>
+        <as:locale>en_CA</as:locale>
+        <category scheme="urn:gc:subject" term="earth-sciences" label="earth sciences" frequency="42760">
+            <link href="-/(urn:gc:subject)earth-sciences" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="geotiff" label="GeoTIFF" frequency="54452">
+            <link href="-/(urn:iso:format)geotiff" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="quebec" label="Quebec" frequency="12122">
+            <link href="-/(urn:iso:place)quebec" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="lac-boisrobert" label="Lac boisrobert" frequency="6">
+            <link href="-/(urn:iso:place)lac-boisrobert" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="032n11" label="032N11" frequency="7">
+            <link href="-/(urn:iso:place)032n11" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="32n11" label="32N11" frequency="1">
+            <link href="-/(urn:iso:place)32n11" rel="related"/>
+        </category>
+        <category scheme="urn:iso:series" term="toporama" label="Toporama" frequency="14880">
+            <link href="-/(urn:iso:series)toporama" rel="related"/>
+        </category>
+        <category scheme="urn:iso:type" term="map" label="Map" frequency="72481">
+            <link href="-/(urn:iso:type)map" rel="related"/>
+        </category>
+        <georss:where>
+            <gml:Polygon srsName="EPSG:4326">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>51.5 -77.5 51.75 -77.5 51.75 -77 51.5 -77 51.5 -77.5</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </georss:where>
+        <link href="./76276fbe-d229-40b9-9a6a-8d46691d61ae.xml" rel="alternate"/>
+    </entry>
+    <entry xmlns:app="http://www.w3.org/2007/app">
+        <id>urn:uuid:3d6db2af-cc3f-5d68-821d-6e89c76d4e0c</id>
+        <link href="./3d6db2af-cc3f-5d68-821d-6e89c76d4e0c.xml" rel="self"/>
+        <link href="http://geogratis.gc.ca/api/" rel="profile"/>
+        <link href="./3d6db2af-cc3f-5d68-821d-6e89c76d4e0c.xml/1" rel="edit"/>
+        <as:entryId>3d6db2af-cc3f-5d68-821d-6e89c76d4e0c</as:entryId>
+        <as:updateIndex>1539417</as:updateIndex>
+        <as:revision>0</as:revision>
+        <link href="./3d6db2af-cc3f-5d68-821d-6e89c76d4e0c.html" rel="alternate" type="text/html"/>
+        <link href="./3d6db2af-cc3f-5d68-821d-6e89c76d4e0c.nrcan" rel="alternate" type="application/vnd.nrcan.atom+xml"/>
+        <link href="./3d6db2af-cc3f-5d68-821d-6e89c76d4e0c.naphtml" rel="alternate" type="text/html; profile=&quot;http://nap.geogratis.gc.ca/&quot;"/>
+        <link href="./3d6db2af-cc3f-5d68-821d-6e89c76d4e0c.phtml" rel="alternate" type="text/phtml"/>
+        <link href="./3d6db2af-cc3f-5d68-821d-6e89c76d4e0c.csv" rel="alternate" type="text/csv"/>
+        <link href="./3d6db2af-cc3f-5d68-821d-6e89c76d4e0c.xml" rel="alternate" type="application/xml"/>
+        <link href="./3d6db2af-cc3f-5d68-821d-6e89c76d4e0c.rss" rel="alternate" type="application/rss+xml"/>
+        <link href="./3d6db2af-cc3f-5d68-821d-6e89c76d4e0c.json" rel="alternate" type="application/json"/>
+        <link href="./3d6db2af-cc3f-5d68-821d-6e89c76d4e0c.kml" rel="alternate" type="application/vnd.google-earth.kml+xml"/>
+        <link href="./3d6db2af-cc3f-5d68-821d-6e89c76d4e0c.nap" rel="alternate" type="application/vnd.nrcan.nap+xml"/>
+        <link href="../../../fr/nrcan-rncan/ess-sst/3d6db2af-cc3f-5d68-821d-6e89c76d4e0c.xml" rel="alternate" hreflang="fr" title="Français"/>
+        <link href=".?alt=osdx" rel="search" type="application/opensearchdescription+xml" title="GeoGratis Product Search"/>
+        <updated>2013-09-06T19:34:44.000Z</updated>
+        <app:edited>2013-09-12T16:57:36.387Z</app:edited>
+        <published>2013-01-01T00:00:00.000Z</published>
+        <title type="text">Till geochemical signatures of the Halfmile Lake Zn-Pb-Cu volcanogenic massive sulphide deposit, Bathurst Mining Camp, New Brunswick</title>
+        <author>
+            <name>Budulan, G; McClenaghan, M B; Parkhill, M A; Layton-Matthews, D; Pyne, M</name>
+        </author>
+        <summary type="text">The Halfmile Lake study was conducted as part of the Geological Survey of Canada's Targeted Geoscience Initiative (TGI-3) Program under the Deep Search Project to document the geochemical and indicator mineral signatures of the till around the Halfmile Lake Zn-Pb-Cu volcanogenic massive sulphide (VMS) deposit in northcentral New Brunswick. Bedrock and till samples were collected in 2007 and 2008 at varying distances up- and down-ice of the deposit. Sampling was focused on the South Upper AB zone because it is the surface expression of the deposit and is capped by a preglacial gossan. Mineralization consists of a Curich stringer zone stratigraphically overlain (structurally underlain) by a Pb-Zn massive sulphide zone. A metal-rich gossan composed of secondary minerals is found at surface. Till in the Halfmile Lake deposit study area is thin (&lt;2 m), light olive brown to dark brown in colour, and silty sand to sandy silt in texture. Ice flow across the deposit area was towards the east-northeast. The pathfinder elements in the &lt;0.063 mm fraction of till that define the signature of the deposit include Cu, Pb, Zn, Ag, As, Au, Bi, Hg, Sb, Se, and Sn. Elevated concentrations of these elements in till down-ice are consistent with the ore mineralogy of the Halfmile Lake deposit and demonstrate that till geochemistry is a useful tool for detecting VMS mineralization in the glaciated terrain of the Bathurst Mining Camp.</summary>
+        <rights type="text">GEOGRATIS LICENCE AGREEMENT FOR UNRESTRICTED USE OF DIGITAL DATA (http://geogratis.cgdi.gc.ca/geogratis/en/licence.jsp)</rights>
+        <as:locale>en_CA</as:locale>
+        <category scheme="urn:atom:author" term="budulan-g" label="Budulan, G" frequency="1">
+            <link href="-/(urn:atom:author)budulan-g" rel="related"/>
+        </category>
+        <category scheme="urn:atom:author" term="mcclenaghan-m-b" label="McClenaghan, M B" frequency="47">
+            <link href="-/(urn:atom:author)mcclenaghan-m-b" rel="related"/>
+        </category>
+        <category scheme="urn:atom:author" term="parkhill-m-a" label="Parkhill, M A" frequency="2">
+            <link href="-/(urn:atom:author)parkhill-m-a" rel="related"/>
+        </category>
+        <category scheme="urn:atom:author" term="layton-matthews-d" label="Layton-Matthews, D" frequency="9">
+            <link href="-/(urn:atom:author)layton-matthews-d" rel="related"/>
+        </category>
+        <category scheme="urn:atom:author" term="pyne-m" label="Pyne, M" frequency="7">
+            <link href="-/(urn:atom:author)pyne-m" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="earth-sciences" label="earth sciences" frequency="42760">
+            <link href="-/(urn:gc:subject)earth-sciences" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="lead" label="lead" frequency="460">
+            <link href="-/(urn:gc:subject)lead" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="gold" label="gold" frequency="767">
+            <link href="-/(urn:gc:subject)gold" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="silver" label="silver" frequency="359">
+            <link href="-/(urn:gc:subject)silver" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="mercury" label="mercury" frequency="74">
+            <link href="-/(urn:gc:subject)mercury" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="geochemistry" label="geochemistry" frequency="1026">
+            <link href="-/(urn:gc:subject)geochemistry" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="zip" label="ZIP" frequency="4273">
+            <link href="-/(urn:iso:format)zip" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="new-brunswick" label="New Brunswick" frequency="5641">
+            <link href="-/(urn:iso:place)new-brunswick" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="halfmile-lake" label="Halfmile Lake" frequency="3">
+            <link href="-/(urn:iso:place)halfmile-lake" rel="related"/>
+        </category>
+        <category scheme="urn:iso:series" term="geological-survey-of-canada-open-file" label="Geological Survey of Canada, Open File" frequency="6479">
+            <link href="-/(urn:iso:series)geological-survey-of-canada-open-file" rel="related"/>
+        </category>
+        <category scheme="urn:iso:type" term="publication" label="Publication" frequency="6043">
+            <link href="-/(urn:iso:type)publication" rel="related"/>
+        </category>
+        <georss:where>
+            <gml:Polygon srsName="EPSG:4326">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>47.299999999999997 -66.349999999999994 47.333300000000001 -66.349999999999994 47.333300000000001 -66.299999999999997 47.299999999999997 -66.299999999999997 47.299999999999997 -66.349999999999994</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </georss:where>
+        <link href="./3d6db2af-cc3f-5d68-821d-6e89c76d4e0c.xml" rel="alternate"/>
+    </entry>
+    <entry xmlns:app="http://www.w3.org/2007/app">
+        <id>urn:uuid:5916cd7f-426b-5008-aa11-1a7968a81bd8</id>
+        <link href="./5916cd7f-426b-5008-aa11-1a7968a81bd8.xml" rel="self"/>
+        <link href="http://geogratis.gc.ca/api/" rel="profile"/>
+        <link href="./5916cd7f-426b-5008-aa11-1a7968a81bd8.xml/1" rel="edit"/>
+        <as:entryId>5916cd7f-426b-5008-aa11-1a7968a81bd8</as:entryId>
+        <as:updateIndex>1539416</as:updateIndex>
+        <as:revision>0</as:revision>
+        <link href="./5916cd7f-426b-5008-aa11-1a7968a81bd8.html" rel="alternate" type="text/html"/>
+        <link href="./5916cd7f-426b-5008-aa11-1a7968a81bd8.nrcan" rel="alternate" type="application/vnd.nrcan.atom+xml"/>
+        <link href="./5916cd7f-426b-5008-aa11-1a7968a81bd8.naphtml" rel="alternate" type="text/html; profile=&quot;http://nap.geogratis.gc.ca/&quot;"/>
+        <link href="./5916cd7f-426b-5008-aa11-1a7968a81bd8.phtml" rel="alternate" type="text/phtml"/>
+        <link href="./5916cd7f-426b-5008-aa11-1a7968a81bd8.csv" rel="alternate" type="text/csv"/>
+        <link href="./5916cd7f-426b-5008-aa11-1a7968a81bd8.xml" rel="alternate" type="application/xml"/>
+        <link href="./5916cd7f-426b-5008-aa11-1a7968a81bd8.rss" rel="alternate" type="application/rss+xml"/>
+        <link href="./5916cd7f-426b-5008-aa11-1a7968a81bd8.json" rel="alternate" type="application/json"/>
+        <link href="./5916cd7f-426b-5008-aa11-1a7968a81bd8.kml" rel="alternate" type="application/vnd.google-earth.kml+xml"/>
+        <link href="./5916cd7f-426b-5008-aa11-1a7968a81bd8.nap" rel="alternate" type="application/vnd.nrcan.nap+xml"/>
+        <link href="../../../fr/nrcan-rncan/ess-sst/5916cd7f-426b-5008-aa11-1a7968a81bd8.xml" rel="alternate" hreflang="fr" title="Français"/>
+        <link href=".?alt=osdx" rel="search" type="application/opensearchdescription+xml" title="GeoGratis Product Search"/>
+        <updated>2013-09-06T13:37:29.000Z</updated>
+        <app:edited>2013-09-12T16:57:35.522Z</app:edited>
+        <published>1992-01-01T00:00:00.000Z</published>
+        <title type="text">Geology, topography, and vegetation, Gros Morne National Park, Newfoundland</title>
+        <author>
+            <name>Berger, A R; Bouchard, A; Brookes, I A; Grant, D R; Hay, S G; Stevens, R K</name>
+        </author>
+        <summary type="text">Abstract not available.</summary>
+        <rights type="text">GEOGRATIS LICENCE AGREEMENT FOR UNRESTRICTED USE OF DIGITAL DATA (http://geogratis.cgdi.gc.ca/geogratis/en/licence.jsp)</rights>
+        <as:locale>en_CA</as:locale>
+        <category scheme="urn:atom:author" term="berger-a-r" label="Berger, A R">
+            <link href="-/(urn:atom:author)berger-a-r" rel="related"/>
+        </category>
+        <category scheme="urn:atom:author" term="bouchard-a" label="Bouchard, A">
+            <link href="-/(urn:atom:author)bouchard-a" rel="related"/>
+        </category>
+        <category scheme="urn:atom:author" term="brookes-i-a" label="Brookes, I A" frequency="1">
+            <link href="-/(urn:atom:author)brookes-i-a" rel="related"/>
+        </category>
+        <category scheme="urn:atom:author" term="grant-d-r" label="Grant, D R" frequency="12">
+            <link href="-/(urn:atom:author)grant-d-r" rel="related"/>
+        </category>
+        <category scheme="urn:atom:author" term="hay-s-g" label="Hay, S G">
+            <link href="-/(urn:atom:author)hay-s-g" rel="related"/>
+        </category>
+        <category scheme="urn:atom:author" term="stevens-r-k" label="Stevens, R K">
+            <link href="-/(urn:atom:author)stevens-r-k" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="earth-sciences" label="earth sciences" frequency="42760">
+            <link href="-/(urn:gc:subject)earth-sciences" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="climate" label="climate" frequency="131">
+            <link href="-/(urn:gc:subject)climate" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="erosion" label="erosion" frequency="167">
+            <link href="-/(urn:gc:subject)erosion" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="zip" label="ZIP" frequency="4273">
+            <link href="-/(urn:iso:format)zip" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="newfoundland-and-labrador" label="Newfoundland and Labrador" frequency="7092">
+            <link href="-/(urn:iso:place)newfoundland-and-labrador" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="gros-morne-national-park" label="Gros Morne National Park">
+            <link href="-/(urn:iso:place)gros-morne-national-park" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="trout-river" label="Trout River" frequency="13">
+            <link href="-/(urn:iso:place)trout-river" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="trout-river-small-pond" label="Trout River Small Pond">
+            <link href="-/(urn:iso:place)trout-river-small-pond" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="rubble-brook" label="Rubble Brook">
+            <link href="-/(urn:iso:place)rubble-brook" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="miners-point" label="Miners Point">
+            <link href="-/(urn:iso:place)miners-point" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="trout-river-gulch" label="Trout River Gulch">
+            <link href="-/(urn:iso:place)trout-river-gulch" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="narrows-head" label="Narrows Head">
+            <link href="-/(urn:iso:place)narrows-head" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="gregory-highlands" label="Gregory Highlands">
+            <link href="-/(urn:iso:place)gregory-highlands" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="norris-point" label="Norris Point">
+            <link href="-/(urn:iso:place)norris-point" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="st-pauls-inlet" label="St Pauls Inlet" frequency="8">
+            <link href="-/(urn:iso:place)st-pauls-inlet" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="long-range-mountains" label="Long Range Mountains" frequency="13">
+            <link href="-/(urn:iso:place)long-range-mountains" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="western-brook-pond" label="Western Brook Pond">
+            <link href="-/(urn:iso:place)western-brook-pond" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="berry-head" label="Berry Head" frequency="1">
+            <link href="-/(urn:iso:place)berry-head" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="bakers-brook-pond" label="Bakers Brook Pond">
+            <link href="-/(urn:iso:place)bakers-brook-pond" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="ten-mile-pond" label="Ten Mile Pond">
+            <link href="-/(urn:iso:place)ten-mile-pond" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="ferry-gulch" label="Ferry Gulch">
+            <link href="-/(urn:iso:place)ferry-gulch" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="old-crow" label="Old Crow" frequency="18">
+            <link href="-/(urn:iso:place)old-crow" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="big-hill" label="Big Hill">
+            <link href="-/(urn:iso:place)big-hill" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="rocky-harbour" label="Rocky Harbour">
+            <link href="-/(urn:iso:place)rocky-harbour" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="big-lookout" label="Big Lookout">
+            <link href="-/(urn:iso:place)big-lookout" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="bonne-bay" label="Bonne Bay" frequency="5">
+            <link href="-/(urn:iso:place)bonne-bay" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="green-gardens" label="Green Gardens">
+            <link href="-/(urn:iso:place)green-gardens" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="salmon-point" label="Salmon Point">
+            <link href="-/(urn:iso:place)salmon-point" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="broom-point" label="Broom Point">
+            <link href="-/(urn:iso:place)broom-point" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="lobster-cove-head" label="Lobster Cove Head">
+            <link href="-/(urn:iso:place)lobster-cove-head" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="cow-head" label="Cow Head">
+            <link href="-/(urn:iso:place)cow-head" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="green-point" label="Green Point">
+            <link href="-/(urn:iso:place)green-point" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="southeast-hills" label="Southeast Hills">
+            <link href="-/(urn:iso:place)southeast-hills" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="woody-point" label="Woody Point">
+            <link href="-/(urn:iso:place)woody-point" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="wallace-brook" label="Wallace Brook">
+            <link href="-/(urn:iso:place)wallace-brook" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="crolly-cove" label="Crolly Cove">
+            <link href="-/(urn:iso:place)crolly-cove" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="halfway-cliff" label="Halfway Cliff">
+            <link href="-/(urn:iso:place)halfway-cliff" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="wintern-house-brook" label="Wintern House Brook">
+            <link href="-/(urn:iso:place)wintern-house-brook" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="berry-barren-brook" label="Berry Barren Brook">
+            <link href="-/(urn:iso:place)berry-barren-brook" rel="related"/>
+        </category>
+        <category scheme="urn:iso:series" term="geological-survey-of-canada-miscellaneous-report" label="Geological Survey of Canada, Miscellaneous Report" frequency="62">
+            <link href="-/(urn:iso:series)geological-survey-of-canada-miscellaneous-report" rel="related"/>
+        </category>
+        <category scheme="urn:iso:type" term="map" label="Map" frequency="72481">
+            <link href="-/(urn:iso:type)map" rel="related"/>
+        </category>
+        <georss:where>
+            <gml:Polygon srsName="EPSG:4326">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>49.25 -58.25 50 -58.25 50 -57.383299999999998 49.25 -57.383299999999998 49.25 -58.25</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </georss:where>
+        <link href="./5916cd7f-426b-5008-aa11-1a7968a81bd8.xml" rel="alternate"/>
+    </entry>
+    <entry xmlns:app="http://www.w3.org/2007/app">
+        <id>urn:uuid:5c7aa9c8-a81c-4fd8-a879-88d11488b794</id>
+        <link href="./5c7aa9c8-a81c-4fd8-a879-88d11488b794.xml" rel="self"/>
+        <link href="http://geogratis.gc.ca/api/" rel="profile"/>
+        <link href="./5c7aa9c8-a81c-4fd8-a879-88d11488b794.xml/1" rel="edit"/>
+        <as:entryId>5c7aa9c8-a81c-4fd8-a879-88d11488b794</as:entryId>
+        <as:updateIndex>1539415</as:updateIndex>
+        <as:revision>0</as:revision>
+        <link href="./5c7aa9c8-a81c-4fd8-a879-88d11488b794.html" rel="alternate" type="text/html"/>
+        <link href="./5c7aa9c8-a81c-4fd8-a879-88d11488b794.nrcan" rel="alternate" type="application/vnd.nrcan.atom+xml"/>
+        <link href="./5c7aa9c8-a81c-4fd8-a879-88d11488b794.naphtml" rel="alternate" type="text/html; profile=&quot;http://nap.geogratis.gc.ca/&quot;"/>
+        <link href="./5c7aa9c8-a81c-4fd8-a879-88d11488b794.phtml" rel="alternate" type="text/phtml"/>
+        <link href="./5c7aa9c8-a81c-4fd8-a879-88d11488b794.csv" rel="alternate" type="text/csv"/>
+        <link href="./5c7aa9c8-a81c-4fd8-a879-88d11488b794.xml" rel="alternate" type="application/xml"/>
+        <link href="./5c7aa9c8-a81c-4fd8-a879-88d11488b794.rss" rel="alternate" type="application/rss+xml"/>
+        <link href="./5c7aa9c8-a81c-4fd8-a879-88d11488b794.json" rel="alternate" type="application/json"/>
+        <link href="./5c7aa9c8-a81c-4fd8-a879-88d11488b794.kml" rel="alternate" type="application/vnd.google-earth.kml+xml"/>
+        <link href="./5c7aa9c8-a81c-4fd8-a879-88d11488b794.nap" rel="alternate" type="application/vnd.nrcan.nap+xml"/>
+        <link href="../../../fr/nrcan-rncan/ess-sst/5c7aa9c8-a81c-4fd8-a879-88d11488b794.xml" rel="alternate" hreflang="fr" title="Français"/>
+        <link href=".?alt=osdx" rel="search" type="application/opensearchdescription+xml" title="GeoGratis Product Search"/>
+        <updated>2013-09-03T13:09:59.000Z</updated>
+        <app:edited>2013-09-12T16:57:33.985Z</app:edited>
+        <published>2013-09-03T00:00:00.000Z</published>
+        <title type="text">Toporama - 056P09 - Cape Weynton, Nunavut</title>
+        <author>
+            <name>Government of Canada, Natural Resources Canada, Earth Sciences Sector, Mapping Information Branch, Centre for Topographic Information - Sherbrooke</name>
+        </author>
+        <summary type="text">Toporama is a digital topographic reference product developed by Natural Resources Canada (NRCan). It covers the entire area of Canada's landmass and provides topographic, geo-referenced, and symbolic information in a raster format. The delimitation, content and representation of this product are similar to those of 1:50,000 scale topographical maps. Toporama is published as an edition (or "release") approximately every six months. It is available free of charge through the GeoGratis portal (www.GeoGratis.gc.ca) in GeoTIFF format, which is a geo-referenced raster format. Toporama is available in the following spatial reference systems: Universal Transverse Mercator (UTM) and geographic (latitude and longitude). Toporama is a product aimed at the general public that can be used by GPS system users who need a geo-referenced raster map product.</summary>
+        <rights type="text">GEOGRATIS LICENCE AGREEMENT FOR UNRESTRICTED USE OF DIGITAL DATA (http://geogratis.cgdi.gc.ca/geogratis/en/licence.jsp)</rights>
+        <as:locale>en_CA</as:locale>
+        <category scheme="urn:gc:subject" term="earth-sciences" label="earth sciences" frequency="42760">
+            <link href="-/(urn:gc:subject)earth-sciences" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="geographic-data" label="Geographic data" frequency="38018">
+            <link href="-/(urn:gc:subject)geographic-data" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="geotiff" label="GeoTIFF" frequency="54452">
+            <link href="-/(urn:iso:format)geotiff" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="nunavut" label="Nunavut" frequency="17296">
+            <link href="-/(urn:iso:place)nunavut" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="cape-weynton" label="Cape weynton" frequency="6">
+            <link href="-/(urn:iso:place)cape-weynton" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="056p09" label="056P09" frequency="7">
+            <link href="-/(urn:iso:place)056p09" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="56p09" label="56P09" frequency="1">
+            <link href="-/(urn:iso:place)56p09" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="56p9" label="56P9" frequency="1">
+            <link href="-/(urn:iso:place)56p9" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="056p9" label="056P9" frequency="1">
+            <link href="-/(urn:iso:place)056p9" rel="related"/>
+        </category>
+        <category scheme="urn:iso:series" term="toporama" label="Toporama" frequency="14880">
+            <link href="-/(urn:iso:series)toporama" rel="related"/>
+        </category>
+        <category scheme="urn:iso:type" term="map" label="Map" frequency="72481">
+            <link href="-/(urn:iso:type)map" rel="related"/>
+        </category>
+        <georss:where>
+            <gml:Polygon srsName="EPSG:4326">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>67.5 -88.5 67.75 -88.5 67.75 -88 67.5 -88 67.5 -88.5</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </georss:where>
+        <link href="./5c7aa9c8-a81c-4fd8-a879-88d11488b794.xml" rel="alternate"/>
+    </entry>
+    <entry xmlns:app="http://www.w3.org/2007/app">
+        <id>urn:uuid:e66179e7-c223-592a-a1b7-3df8aad03096</id>
+        <link href="./e66179e7-c223-592a-a1b7-3df8aad03096.xml" rel="self"/>
+        <link href="http://geogratis.gc.ca/api/" rel="profile"/>
+        <link href="./e66179e7-c223-592a-a1b7-3df8aad03096.xml/1" rel="edit"/>
+        <as:entryId>e66179e7-c223-592a-a1b7-3df8aad03096</as:entryId>
+        <as:updateIndex>1539412</as:updateIndex>
+        <as:revision>0</as:revision>
+        <link href="./e66179e7-c223-592a-a1b7-3df8aad03096.html" rel="alternate" type="text/html"/>
+        <link href="./e66179e7-c223-592a-a1b7-3df8aad03096.nrcan" rel="alternate" type="application/vnd.nrcan.atom+xml"/>
+        <link href="./e66179e7-c223-592a-a1b7-3df8aad03096.naphtml" rel="alternate" type="text/html; profile=&quot;http://nap.geogratis.gc.ca/&quot;"/>
+        <link href="./e66179e7-c223-592a-a1b7-3df8aad03096.phtml" rel="alternate" type="text/phtml"/>
+        <link href="./e66179e7-c223-592a-a1b7-3df8aad03096.csv" rel="alternate" type="text/csv"/>
+        <link href="./e66179e7-c223-592a-a1b7-3df8aad03096.xml" rel="alternate" type="application/xml"/>
+        <link href="./e66179e7-c223-592a-a1b7-3df8aad03096.rss" rel="alternate" type="application/rss+xml"/>
+        <link href="./e66179e7-c223-592a-a1b7-3df8aad03096.json" rel="alternate" type="application/json"/>
+        <link href="./e66179e7-c223-592a-a1b7-3df8aad03096.kml" rel="alternate" type="application/vnd.google-earth.kml+xml"/>
+        <link href="./e66179e7-c223-592a-a1b7-3df8aad03096.nap" rel="alternate" type="application/vnd.nrcan.nap+xml"/>
+        <link href="../../../fr/nrcan-rncan/ess-sst/e66179e7-c223-592a-a1b7-3df8aad03096.xml" rel="alternate" hreflang="fr" title="Français"/>
+        <link href=".?alt=osdx" rel="search" type="application/opensearchdescription+xml" title="GeoGratis Product Search"/>
+        <updated>2013-09-06T11:44:36.000Z</updated>
+        <app:edited>2013-09-12T16:57:31.288Z</app:edited>
+        <published>1963-01-01T00:00:00.000Z</published>
+        <title type="text">Red Lake - Lansdowne House area, northwestern Ontario, surficial geology</title>
+        <author>
+            <name>Prest, V K</name>
+        </author>
+        <summary type="text">Abstract not available.</summary>
+        <rights type="text">GEOGRATIS LICENCE AGREEMENT FOR UNRESTRICTED USE OF DIGITAL DATA (http://geogratis.cgdi.gc.ca/geogratis/en/licence.jsp)</rights>
+        <as:locale>en_CA</as:locale>
+        <category scheme="urn:atom:author" term="prest-v-k" label="Prest, V K" frequency="22">
+            <link href="-/(urn:atom:author)prest-v-k" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="earth-sciences" label="earth sciences" frequency="42760">
+            <link href="-/(urn:gc:subject)earth-sciences" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="zip" label="ZIP" frequency="4273">
+            <link href="-/(urn:iso:format)zip" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="ontario" label="Ontario" frequency="10480">
+            <link href="-/(urn:iso:place)ontario" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="lansdowne-house" label="Lansdowne House" frequency="6">
+            <link href="-/(urn:iso:place)lansdowne-house" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="red-lake" label="Red Lake" frequency="32">
+            <link href="-/(urn:iso:place)red-lake" rel="related"/>
+        </category>
+        <category scheme="urn:iso:series" term="geological-survey-of-canada-paper" label="Geological Survey of Canada, Paper" frequency="228">
+            <link href="-/(urn:iso:series)geological-survey-of-canada-paper" rel="related"/>
+        </category>
+        <category scheme="urn:iso:type" term="publication" label="Publication" frequency="6043">
+            <link href="-/(urn:iso:type)publication" rel="related"/>
+        </category>
+        <georss:where>
+            <gml:Polygon srsName="EPSG:4326">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>50 -96 54 -96 54 -86 50 -86 50 -96</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </georss:where>
+        <link href="./e66179e7-c223-592a-a1b7-3df8aad03096.xml" rel="alternate"/>
+    </entry>
+    <entry xmlns:app="http://www.w3.org/2007/app">
+        <id>urn:uuid:78e402f4-3ac2-5631-95a1-a122d5df5961</id>
+        <link href="./78e402f4-3ac2-5631-95a1-a122d5df5961.xml" rel="self"/>
+        <link href="http://geogratis.gc.ca/api/" rel="profile"/>
+        <link href="./78e402f4-3ac2-5631-95a1-a122d5df5961.xml/1" rel="edit"/>
+        <as:entryId>78e402f4-3ac2-5631-95a1-a122d5df5961</as:entryId>
+        <as:updateIndex>1539407</as:updateIndex>
+        <as:revision>0</as:revision>
+        <link href="./78e402f4-3ac2-5631-95a1-a122d5df5961.html" rel="alternate" type="text/html"/>
+        <link href="./78e402f4-3ac2-5631-95a1-a122d5df5961.nrcan" rel="alternate" type="application/vnd.nrcan.atom+xml"/>
+        <link href="./78e402f4-3ac2-5631-95a1-a122d5df5961.naphtml" rel="alternate" type="text/html; profile=&quot;http://nap.geogratis.gc.ca/&quot;"/>
+        <link href="./78e402f4-3ac2-5631-95a1-a122d5df5961.phtml" rel="alternate" type="text/phtml"/>
+        <link href="./78e402f4-3ac2-5631-95a1-a122d5df5961.csv" rel="alternate" type="text/csv"/>
+        <link href="./78e402f4-3ac2-5631-95a1-a122d5df5961.xml" rel="alternate" type="application/xml"/>
+        <link href="./78e402f4-3ac2-5631-95a1-a122d5df5961.rss" rel="alternate" type="application/rss+xml"/>
+        <link href="./78e402f4-3ac2-5631-95a1-a122d5df5961.json" rel="alternate" type="application/json"/>
+        <link href="./78e402f4-3ac2-5631-95a1-a122d5df5961.kml" rel="alternate" type="application/vnd.google-earth.kml+xml"/>
+        <link href="./78e402f4-3ac2-5631-95a1-a122d5df5961.nap" rel="alternate" type="application/vnd.nrcan.nap+xml"/>
+        <link href="../../../fr/nrcan-rncan/ess-sst/78e402f4-3ac2-5631-95a1-a122d5df5961.xml" rel="alternate" hreflang="fr" title="Français"/>
+        <link href=".?alt=osdx" rel="search" type="application/opensearchdescription+xml" title="GeoGratis Product Search"/>
+        <updated>2013-09-12T00:15:52.000Z</updated>
+        <app:edited>2013-09-12T16:57:28.501Z</app:edited>
+        <published>1973-01-01T00:00:00.000Z</published>
+        <title type="text">Description of Carboniferous and Permian stratigraphic sections, northern Yukon and northwestern District of Mackenzie</title>
+        <author>
+            <name>Bamber, E W</name>
+        </author>
+        <summary type="text">Abstract not available.</summary>
+        <rights type="text">GEOGRATIS LICENCE AGREEMENT FOR UNRESTRICTED USE OF DIGITAL DATA (http://geogratis.cgdi.gc.ca/geogratis/en/licence.jsp)</rights>
+        <as:locale>en_CA</as:locale>
+        <category scheme="urn:atom:author" term="bamber-e-w" label="Bamber, E W" frequency="4">
+            <link href="-/(urn:atom:author)bamber-e-w" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="earth-sciences" label="earth sciences" frequency="42760">
+            <link href="-/(urn:gc:subject)earth-sciences" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="stratigraphy" label="stratigraphy" frequency="1708">
+            <link href="-/(urn:gc:subject)stratigraphy" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="pdf" label="PDF" frequency="38692">
+            <link href="-/(urn:iso:format)pdf" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="yukon" label="Yukon" frequency="7356">
+            <link href="-/(urn:iso:place)yukon" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="northwest-territories" label="Northwest Territories" frequency="11435">
+            <link href="-/(urn:iso:place)northwest-territories" rel="related"/>
+        </category>
+        <category scheme="urn:iso:series" term="geological-survey-of-canada-paper" label="Geological Survey of Canada, Paper" frequency="228">
+            <link href="-/(urn:iso:series)geological-survey-of-canada-paper" rel="related"/>
+        </category>
+        <category scheme="urn:iso:type" term="publication" label="Publication" frequency="6043">
+            <link href="-/(urn:iso:type)publication" rel="related"/>
+        </category>
+        <georss:where>
+            <gml:Polygon srsName="EPSG:4326">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>64 -141 70 -141 70 -134 64 -134 64 -141</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </georss:where>
+        <link href="./78e402f4-3ac2-5631-95a1-a122d5df5961.xml" rel="alternate"/>
+    </entry>
+    <entry xmlns:app="http://www.w3.org/2007/app">
+        <id>urn:uuid:89f478e0-7167-59c3-934f-262049a3c4e9</id>
+        <link href="./89f478e0-7167-59c3-934f-262049a3c4e9.xml" rel="self"/>
+        <link href="http://geogratis.gc.ca/api/" rel="profile"/>
+        <link href="./89f478e0-7167-59c3-934f-262049a3c4e9.xml/1" rel="edit"/>
+        <as:entryId>89f478e0-7167-59c3-934f-262049a3c4e9</as:entryId>
+        <as:updateIndex>1539404</as:updateIndex>
+        <as:revision>0</as:revision>
+        <link href="./89f478e0-7167-59c3-934f-262049a3c4e9.html" rel="alternate" type="text/html"/>
+        <link href="./89f478e0-7167-59c3-934f-262049a3c4e9.nrcan" rel="alternate" type="application/vnd.nrcan.atom+xml"/>
+        <link href="./89f478e0-7167-59c3-934f-262049a3c4e9.naphtml" rel="alternate" type="text/html; profile=&quot;http://nap.geogratis.gc.ca/&quot;"/>
+        <link href="./89f478e0-7167-59c3-934f-262049a3c4e9.phtml" rel="alternate" type="text/phtml"/>
+        <link href="./89f478e0-7167-59c3-934f-262049a3c4e9.csv" rel="alternate" type="text/csv"/>
+        <link href="./89f478e0-7167-59c3-934f-262049a3c4e9.xml" rel="alternate" type="application/xml"/>
+        <link href="./89f478e0-7167-59c3-934f-262049a3c4e9.rss" rel="alternate" type="application/rss+xml"/>
+        <link href="./89f478e0-7167-59c3-934f-262049a3c4e9.json" rel="alternate" type="application/json"/>
+        <link href="./89f478e0-7167-59c3-934f-262049a3c4e9.kml" rel="alternate" type="application/vnd.google-earth.kml+xml"/>
+        <link href="./89f478e0-7167-59c3-934f-262049a3c4e9.nap" rel="alternate" type="application/vnd.nrcan.nap+xml"/>
+        <link href="../../../fr/nrcan-rncan/ess-sst/89f478e0-7167-59c3-934f-262049a3c4e9.xml" rel="alternate" hreflang="fr" title="Français"/>
+        <link href=".?alt=osdx" rel="search" type="application/opensearchdescription+xml" title="GeoGratis Product Search"/>
+        <updated>2013-09-12T00:15:42.000Z</updated>
+        <app:edited>2013-09-12T16:57:27.410Z</app:edited>
+        <published>1967-01-01T00:00:00.000Z</published>
+        <title type="text">Reconnaissance geology of Shelburne map area, Queens, Shelburne and Yarmouth counties, Nova Scotia</title>
+        <author>
+            <name>Taylor, F C</name>
+        </author>
+        <summary type="text">Abstract not available. These are comprehensive final reports on the geology of specific geographic areas.</summary>
+        <rights type="text">GEOGRATIS LICENCE AGREEMENT FOR UNRESTRICTED USE OF DIGITAL DATA (http://geogratis.cgdi.gc.ca/geogratis/en/licence.jsp)</rights>
+        <as:locale>en_CA</as:locale>
+        <category scheme="urn:atom:author" term="taylor-f-c" label="Taylor, F C" frequency="54">
+            <link href="-/(urn:atom:author)taylor-f-c" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="earth-sciences" label="earth sciences" frequency="42760">
+            <link href="-/(urn:gc:subject)earth-sciences" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="gold" label="gold" frequency="767">
+            <link href="-/(urn:gc:subject)gold" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="zip" label="ZIP" frequency="4273">
+            <link href="-/(urn:iso:format)zip" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="nova-scotia" label="Nova Scotia" frequency="5822">
+            <link href="-/(urn:iso:place)nova-scotia" rel="related"/>
+        </category>
+        <category scheme="urn:iso:series" term="geological-survey-of-canada-memoir" label="Geological Survey of Canada, Memoir" frequency="13">
+            <link href="-/(urn:iso:series)geological-survey-of-canada-memoir" rel="related"/>
+        </category>
+        <category scheme="urn:iso:type" term="publication" label="Publication" frequency="6043">
+            <link href="-/(urn:iso:type)publication" rel="related"/>
+        </category>
+        <georss:where>
+            <gml:Polygon srsName="EPSG:4326">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>43 -67 44 -67 44 -64 43 -64 43 -67</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </georss:where>
+        <link href="./89f478e0-7167-59c3-934f-262049a3c4e9.xml" rel="alternate"/>
+    </entry>
+    <entry xmlns:app="http://www.w3.org/2007/app">
+        <id>urn:uuid:32e09d9c-961e-5e15-bc98-eb1614cb30b1</id>
+        <link href="./32e09d9c-961e-5e15-bc98-eb1614cb30b1.xml" rel="self"/>
+        <link href="http://geogratis.gc.ca/api/" rel="profile"/>
+        <link href="./32e09d9c-961e-5e15-bc98-eb1614cb30b1.xml/1" rel="edit"/>
+        <as:entryId>32e09d9c-961e-5e15-bc98-eb1614cb30b1</as:entryId>
+        <as:updateIndex>1539403</as:updateIndex>
+        <as:revision>0</as:revision>
+        <link href="./32e09d9c-961e-5e15-bc98-eb1614cb30b1.html" rel="alternate" type="text/html"/>
+        <link href="./32e09d9c-961e-5e15-bc98-eb1614cb30b1.nrcan" rel="alternate" type="application/vnd.nrcan.atom+xml"/>
+        <link href="./32e09d9c-961e-5e15-bc98-eb1614cb30b1.naphtml" rel="alternate" type="text/html; profile=&quot;http://nap.geogratis.gc.ca/&quot;"/>
+        <link href="./32e09d9c-961e-5e15-bc98-eb1614cb30b1.phtml" rel="alternate" type="text/phtml"/>
+        <link href="./32e09d9c-961e-5e15-bc98-eb1614cb30b1.csv" rel="alternate" type="text/csv"/>
+        <link href="./32e09d9c-961e-5e15-bc98-eb1614cb30b1.xml" rel="alternate" type="application/xml"/>
+        <link href="./32e09d9c-961e-5e15-bc98-eb1614cb30b1.rss" rel="alternate" type="application/rss+xml"/>
+        <link href="./32e09d9c-961e-5e15-bc98-eb1614cb30b1.json" rel="alternate" type="application/json"/>
+        <link href="./32e09d9c-961e-5e15-bc98-eb1614cb30b1.kml" rel="alternate" type="application/vnd.google-earth.kml+xml"/>
+        <link href="./32e09d9c-961e-5e15-bc98-eb1614cb30b1.nap" rel="alternate" type="application/vnd.nrcan.nap+xml"/>
+        <link href="../../../fr/nrcan-rncan/ess-sst/32e09d9c-961e-5e15-bc98-eb1614cb30b1.xml" rel="alternate" hreflang="fr" title="Français"/>
+        <link href=".?alt=osdx" rel="search" type="application/opensearchdescription+xml" title="GeoGratis Product Search"/>
+        <updated>2013-09-06T19:36:28.000Z</updated>
+        <app:edited>2013-09-12T16:57:26.479Z</app:edited>
+        <published>2013-01-01T00:00:00.000Z</published>
+        <title type="text">Blue Atlantic Pipeline Corridor geologic constraints, Scotian Shelf: desktop study</title>
+        <author>
+            <name>King, E L; Fader, G B J; Lynds, T; Hynes, S; Miller, R O</name>
+        </author>
+        <summary type="text">Abstract not available. This series is produced to expedite the release of information by making unedited manuscript material available to the public in advance of formal publication, and to act as a repository for relevant supporting data that are referred to in published reports. Open Files can be maps; reports; voluminous data sets resulting from multiparameter geophysical and geochemical surveys; consultants' reports; preliminary, unvetted field and laboratory results. They are all critically reviewed by one specialist. The series is geared towards specialists (mining industry, land-use planning, geoscience students) rather than the general public.</summary>
+        <rights type="text">GEOGRATIS LICENCE AGREEMENT FOR UNRESTRICTED USE OF DIGITAL DATA (http://geogratis.cgdi.gc.ca/geogratis/en/licence.jsp)</rights>
+        <as:locale>en_CA</as:locale>
+        <category scheme="urn:atom:author" term="king-e-l" label="King, E L" frequency="18">
+            <link href="-/(urn:atom:author)king-e-l" rel="related"/>
+        </category>
+        <category scheme="urn:atom:author" term="fader-g-b-j" label="Fader, G B J" frequency="35">
+            <link href="-/(urn:atom:author)fader-g-b-j" rel="related"/>
+        </category>
+        <category scheme="urn:atom:author" term="lynds-t" label="Lynds, T" frequency="4">
+            <link href="-/(urn:atom:author)lynds-t" rel="related"/>
+        </category>
+        <category scheme="urn:atom:author" term="hynes-s" label="Hynes, S" frequency="1">
+            <link href="-/(urn:atom:author)hynes-s" rel="related"/>
+        </category>
+        <category scheme="urn:atom:author" term="miller-r-o" label="Miller, R O" frequency="24">
+            <link href="-/(urn:atom:author)miller-r-o" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="earth-sciences" label="earth sciences" frequency="42760">
+            <link href="-/(urn:gc:subject)earth-sciences" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="pipelines" label="pipelines" frequency="48">
+            <link href="-/(urn:gc:subject)pipelines" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="zip" label="ZIP" frequency="4273">
+            <link href="-/(urn:iso:format)zip" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="eastern-offshore-region" label="Eastern offshore region" frequency="1027">
+            <link href="-/(urn:iso:place)eastern-offshore-region" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="scotian-shelf" label="Scotian Shelf" frequency="203">
+            <link href="-/(urn:iso:place)scotian-shelf" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="sable-island-bank" label="Sable Island Bank" frequency="28">
+            <link href="-/(urn:iso:place)sable-island-bank" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="emerald-bank" label="Emerald Bank" frequency="3">
+            <link href="-/(urn:iso:place)emerald-bank" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="lahave-basin" label="LaHave Basin" frequency="2">
+            <link href="-/(urn:iso:place)lahave-basin" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="lahave-bank" label="LaHave Bank" frequency="2">
+            <link href="-/(urn:iso:place)lahave-bank" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="south-shore" label="South Shore">
+            <link href="-/(urn:iso:place)south-shore" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="pennant-point-moraines" label="Pennant Point Moraines">
+            <link href="-/(urn:iso:place)pennant-point-moraines" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="baccaro-bank" label="Baccaro Bank">
+            <link href="-/(urn:iso:place)baccaro-bank" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="roseway-bank" label="Roseway Bank">
+            <link href="-/(urn:iso:place)roseway-bank" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="roseway-basin" label="Roseway Basin">
+            <link href="-/(urn:iso:place)roseway-basin" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="browns-bank" label="Browns Bank" frequency="9">
+            <link href="-/(urn:iso:place)browns-bank" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="georges-basin" label="Georges Basin" frequency="9">
+            <link href="-/(urn:iso:place)georges-basin" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="sewell-ridge" label="Sewell Ridge">
+            <link href="-/(urn:iso:place)sewell-ridge" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="crowell-basin" label="Crowell Basin">
+            <link href="-/(urn:iso:place)crowell-basin" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="georges-bank" label="Georges Bank" frequency="31">
+            <link href="-/(urn:iso:place)georges-bank" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="sable-island" label="Sable Island" frequency="97">
+            <link href="-/(urn:iso:place)sable-island" rel="related"/>
+        </category>
+        <category scheme="urn:iso:series" term="geological-survey-of-canada-open-file" label="Geological Survey of Canada, Open File" frequency="6479">
+            <link href="-/(urn:iso:series)geological-survey-of-canada-open-file" rel="related"/>
+        </category>
+        <category scheme="urn:iso:type" term="publication" label="Publication" frequency="6043">
+            <link href="-/(urn:iso:type)publication" rel="related"/>
+        </category>
+        <georss:where>
+            <gml:Polygon srsName="EPSG:4326">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>41.5 -68 44.5 -68 44.5 -59 41.5 -59 41.5 -68</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </georss:where>
+        <link href="./32e09d9c-961e-5e15-bc98-eb1614cb30b1.xml" rel="alternate"/>
+    </entry>
+    <entry xmlns:app="http://www.w3.org/2007/app">
+        <id>urn:uuid:a26c72da-7e00-4f16-b8ff-813942a2bb06</id>
+        <link href="./a26c72da-7e00-4f16-b8ff-813942a2bb06.xml" rel="self"/>
+        <link href="http://geogratis.gc.ca/api/" rel="profile"/>
+        <link href="./a26c72da-7e00-4f16-b8ff-813942a2bb06.xml/1" rel="edit"/>
+        <as:entryId>a26c72da-7e00-4f16-b8ff-813942a2bb06</as:entryId>
+        <as:updateIndex>1539402</as:updateIndex>
+        <as:revision>0</as:revision>
+        <link href="./a26c72da-7e00-4f16-b8ff-813942a2bb06.html" rel="alternate" type="text/html"/>
+        <link href="./a26c72da-7e00-4f16-b8ff-813942a2bb06.nrcan" rel="alternate" type="application/vnd.nrcan.atom+xml"/>
+        <link href="./a26c72da-7e00-4f16-b8ff-813942a2bb06.naphtml" rel="alternate" type="text/html; profile=&quot;http://nap.geogratis.gc.ca/&quot;"/>
+        <link href="./a26c72da-7e00-4f16-b8ff-813942a2bb06.phtml" rel="alternate" type="text/phtml"/>
+        <link href="./a26c72da-7e00-4f16-b8ff-813942a2bb06.csv" rel="alternate" type="text/csv"/>
+        <link href="./a26c72da-7e00-4f16-b8ff-813942a2bb06.xml" rel="alternate" type="application/xml"/>
+        <link href="./a26c72da-7e00-4f16-b8ff-813942a2bb06.rss" rel="alternate" type="application/rss+xml"/>
+        <link href="./a26c72da-7e00-4f16-b8ff-813942a2bb06.json" rel="alternate" type="application/json"/>
+        <link href="./a26c72da-7e00-4f16-b8ff-813942a2bb06.kml" rel="alternate" type="application/vnd.google-earth.kml+xml"/>
+        <link href="./a26c72da-7e00-4f16-b8ff-813942a2bb06.nap" rel="alternate" type="application/vnd.nrcan.nap+xml"/>
+        <link href="../../../fr/nrcan-rncan/ess-sst/a26c72da-7e00-4f16-b8ff-813942a2bb06.xml" rel="alternate" hreflang="fr" title="Français"/>
+        <link href=".?alt=osdx" rel="search" type="application/opensearchdescription+xml" title="GeoGratis Product Search"/>
+        <updated>2013-09-03T13:11:53.000Z</updated>
+        <app:edited>2013-09-12T16:57:26.054Z</app:edited>
+        <published>2013-09-03T00:00:00.000Z</published>
+        <title type="text">Toporama - 040I12 - Bothwell, Ontario</title>
+        <author>
+            <name>Government of Canada, Natural Resources Canada, Earth Sciences Sector, Mapping Information Branch, Centre for Topographic Information - Sherbrooke</name>
+        </author>
+        <summary type="text">Toporama is a digital topographic reference product developed by Natural Resources Canada (NRCan). It covers the entire area of Canada's landmass and provides topographic, geo-referenced, and symbolic information in a raster format. The delimitation, content and representation of this product are similar to those of 1:50,000 scale topographical maps. Toporama is published as an edition (or "release") approximately every six months. It is available free of charge through the GeoGratis portal (www.GeoGratis.gc.ca) in GeoTIFF format, which is a geo-referenced raster format. Toporama is available in the following spatial reference systems: Universal Transverse Mercator (UTM) and geographic (latitude and longitude). Toporama is a product aimed at the general public that can be used by GPS system users who need a geo-referenced raster map product.</summary>
+        <rights type="text">GEOGRATIS LICENCE AGREEMENT FOR UNRESTRICTED USE OF DIGITAL DATA (http://geogratis.cgdi.gc.ca/geogratis/en/licence.jsp)</rights>
+        <as:locale>en_CA</as:locale>
+        <category scheme="urn:gc:subject" term="earth-sciences" label="earth sciences" frequency="42760">
+            <link href="-/(urn:gc:subject)earth-sciences" rel="related"/>
+        </category>
+        <category scheme="urn:gc:subject" term="geographic-data" label="Geographic data" frequency="38018">
+            <link href="-/(urn:gc:subject)geographic-data" rel="related"/>
+        </category>
+        <category scheme="urn:iso:format" term="geotiff" label="GeoTIFF" frequency="54452">
+            <link href="-/(urn:iso:format)geotiff" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="ontario" label="Ontario" frequency="10480">
+            <link href="-/(urn:iso:place)ontario" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="bothwell" label="Bothwell" frequency="6">
+            <link href="-/(urn:iso:place)bothwell" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="040i12" label="040I12" frequency="6">
+            <link href="-/(urn:iso:place)040i12" rel="related"/>
+        </category>
+        <category scheme="urn:iso:place" term="40i12" label="40I12" frequency="1">
+            <link href="-/(urn:iso:place)40i12" rel="related"/>
+        </category>
+        <category scheme="urn:iso:series" term="toporama" label="Toporama" frequency="14880">
+            <link href="-/(urn:iso:series)toporama" rel="related"/>
+        </category>
+        <category scheme="urn:iso:type" term="map" label="Map" frequency="72481">
+            <link href="-/(urn:iso:type)map" rel="related"/>
+        </category>
+        <georss:where>
+            <gml:Polygon srsName="EPSG:4326">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>42.5 -82 42.75 -82 42.75 -81.5 42.5 -81.5 42.5 -82</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </georss:where>
+        <link href="./a26c72da-7e00-4f16-b8ff-813942a2bb06.xml" rel="alternate"/>
+    </entry>
+</feed>
